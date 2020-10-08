@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{blindtext}
+
+\title{Automatic Detection and Segmentation of Brain Tumor Using Random Forest Approach}    
+\author{Draft by Leonard Brenk}
+
+\begin{document}
+    \maketitle
+    %In this abstract I will give a short introduction and summary about the study of Zoltan Kapas about the automatic detection and segmentation of brain tumor using the random forest approach published in 2013 (or 2012).
+
+    %In this study 12 volumes from the MICCAI BRATS database are preprocessed, analysed and used as test and training data. A volume is a three-dimensional model of a human brain. The database contains four different tyes of volumes for each of 30 different glioma patients. 
+    %The different kinds of images that are being created through the process of magnetic resonance imaging are T1, T2, T1 post Gladinium and FLAIR. \textbf{Since 12 volumes were used in this study and for each patient 4 differnet kinds of volume has been generated, the study uses data from three different patients.}
+
+    These are my first thoughts and impressions. Please correct me if I'm wrong. I specifially highlighted the parts which I am not sure about and might have misunderstood.\\
+
+    The idea is to enhance and improve the detection and segmentation of brain tumor whereas deciding about it's presence is the primary goal of this study. Data used for training and testing decision trees and random forests were obtained from the MICCAI BRATS database. It consists of multiple volumes - meaning three-dimensional images of brains - in different types of images resulting from magnetic resonance imaging, like T1, T2, T1 post Gladinium and FLAIR. \textbf{These types are called the features.} The images were generated from 30 glioma patients in different stages. \textbf{In this study 12 volumes were used. With four different types of volume per patient (T1,etc) there are three patients considered in this case.} Seing that the four volumes show the same brain differently a way of adressing a single voxel - a 3D-pixel - is needed. Therefore a feature-vector has been designed to point out one specific coordinate in each of the four feature volumes: \\
+
+    \[ \vec{x} = \bigg[ \: T1\; [x,y,z], \: T2\; [x,y,z], \: T1C\; [x,y,z],\:  FLAIR\; [x,y,z] \bigg] \]\\
+
+    Thereby we can adress one voxel and compare and process it directly. This is required for training and testing binary decision trees. Before the data can be used it has to undergo several preprocessing steps like the normalization of intensity values. \textbf{The intensity of a pixel is the brightness of it.} Normalizing a histogram means that it is changed in order to locate 50\% of the data between the brightness values of 600 and 800. Also values smaller than 200 and larger then 1200 are being replaced by their limit. Another preliminary adaption of the data is the computation of location information. Since the feature vector does not carry any information regarding this, eight more features are included into the feature vector, two for each channel. \textbf{So now the feature vector contains 12 numbers.} CONTINUE DESCRIBING THE NEIGHBORS.
+
+
+
+
+
+\newpage
+    \begin{enumerate}
+        \item Goal: Enhancing and improving the detection and segregation of brain tumor
+        \item What is given: Data from database
+        \begin{itemize}
+            \item Who ? 
+            \item what kind of data in what manner ? What does it look like 
+            \item Where is it from 
+            \item 12 volumes (describing), 3 patients 
+        \end{itemize}
+    \end{enumerate}
+    \end{document}
