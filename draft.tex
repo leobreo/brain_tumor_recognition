@@ -6,6 +6,7 @@
 
 \begin{document}
  \maketitle
+
  These are my first thoughts and impressions. Please correct me if I'm wrong. I specifically highlighted the parts which I am not sure about and might have misunderstood.\\
 
  The idea is to enhance and improve the detection and segmentation of brain tumors whereas deciding about its presence is the primary goal of this study. Data used for training and testing decision trees and random forests were obtained from the MICCAI BRATS database. It consists of multiple volumes - meaning three-dimensional images of brains - in different types of images resulting from magnetic resonance imaging, like T1, T2, T1 post-Gladinium and FLAIR. \textbf{These types are called the features.} The images were generated from 30 glioma patients in different stages. \textbf{In this study 12 volumes were used. With four different types of volume per patient (T1, etc) there are three patients considered in this case.} Seeing that the four volumes show the same brain differently a way of addressing a single voxel - a 3D-pixel - is needed. Therefore a feature-vector has been designed to point out one specific coordinate in each of the four feature volumes:\\
@@ -19,6 +20,25 @@
  A problem that can occur while training a BDT is overfitting. It's a scenario in which the tree's classification ability is optimized for that specific set of data it was trained with. For example: In a data set where all tumor pixels are a bit darker than average, the tree will not detect tumors on unknown images that are lighter. The tree has not been trained for all general types of tumors an image can contain. That's why random forests are implemented. These consist - like in the real world - of many trees that were trained by random subsets of the training data. Also, the features were chosen randomly. \textbf{In the end when testing a vector, that vector is being put in all trees of the forest, which will result in many possibly different labels. Through a majority decision, the final label for that vector is then found.}\\
 
 
- Although a random forest can detect most of the tumor pixel in an image we still can achieve a significant improvement through post-processing. Thereby we count how many neighbors of that pixel in a 250-pixel radius are also labeled the same way and improve regardingly. 
+ Although a random forest can detect most of the tumor pixel in an image we still can achieve a significant improvement through post-processing. Thereby we count how many neighbors of that pixel in a 250-pixel radius are also labeled the same way and improve regardingly. \\
+ 
+
+ \newpage
+
+ Throughout doing research and reading the article I was unsure about a few things:
+
+ \begin{enumerate}
+     \item Why doesn't the intensity value say anyting about the tissue? Just because of anatomical differences? 
+     \item Is the intensity value the brightness of the pixel? 
+     \item Is the only value considered the brightness and T1, T2, T1C, FLAIR the features which are being analysed and compared based on their brightness? 
+     \item Do 12 volumes mean 4 volumes per patient which would lead to three patients in total? or does a volume include all four kinds (T1,...) meaning 12 patients in total ?Then again what exactly is meant by "one volume" in this case? 
+     \item What does HG01,.. mean (High Grade)? 
+     \item What does a "record" describe? 
+     \item "training with data from only one volume" - meaning only T1 or T2 (...) or all four images of just one patient ? 
+     \item Does a high ASC mean high symmetry ?
+     \item Definition "sample" (vectors ? so one pixel of one feature? )
+     \item How to read figure 4 ? 
+     \item When tested and later used in real cases, all pixels of an mri image are given into the forest seperately one after another and every tree checks the same pixel, right? If all pixels are labeled negative in the end, there is no tumor present ? 
+    \end{enumerate}
 
 \end{document}
