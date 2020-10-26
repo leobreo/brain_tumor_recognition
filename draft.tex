@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{blindtext}
+\usepackage{xcolor}
 
 \title{Automatic Detection and Segmentation of Brain Tumor Using Random Forest Approach} 
 \author{Draft by Leonard Brenk}
@@ -24,21 +25,43 @@
  
 
  \newpage
-
+ \section{Questions No. 1}
  Throughout doing research and reading the article I was unsure about a few things:
 
  \begin{enumerate}
      \item Why doesn't the intensity value say anyting about the tissue? Just because of anatomical differences? 
+        \textcolor{red}{Pixel is signalstärke - es geht mehr um den kontet der nachbarn um dem pixel eine bedeutung zu geben.}
      \item Is the intensity value the brightness of the pixel? 
+        \textcolor{red}{mor the signalstärke}
      \item Is the only value considered the brightness and T1, T2, T1C, FLAIR the features which are being analysed and compared based on their brightness? 
+        \textcolor{red}{Antwort}
      \item Do 12 volumes mean 4 volumes per patient which would lead to three patients in total? or does a volume include all four kinds (T1,...) meaning 12 patients in total ?Then again what exactly is meant by "one volume" in this case? 
+        \textcolor{red}{12 people with each four volumes}
      \item What does HG01,.. mean (High Grade)? 
+        \textcolor{red}{High Grade, one HG consists offour volumes, 3d bilder hinterinander sind "Channels"}
      \item What does a "record" describe? 
+        \textcolor{red}{the Four together }
      \item "training with data from only one volume" - meaning only T1 or T2 (...) or all four images of just one patient ? 
+        \textcolor{red}{Yes four volumes of one patients}
      \item Does a high ASC mean high symmetry ?
+        \textcolor{red}{Antwort}
      \item Definition "sample" (vectors ? so one pixel of one feature? )
+        \textcolor{red}{Like thought eine teilmenge der gewünschten Vektoren}
      \item How to read figure 4 ? 
+        \textcolor{red}{viele kleine strukturen, die nicht zu dem tumor gehören. Als ergebnis der vektoren kommt ein volumen raus mit einfach nur 3 labels als wert - nicht vetgleichbar zu T1, etc. }
      \item When tested and later used in real cases, all pixels of an mri image are given into the forest seperately one after another and every tree checks the same pixel, right? If all pixels are labeled negative in the end, there is no tumor present ? 
+        \textcolor{red}{Antwort}
+    \item Welches Feature wird beim training genommen? - Informationgain und entropie
+    \item Bagging: generierung randomness beim training 
+    \item read $https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/decisionForests_MSR_TR_2011_114.pdf$
     \end{enumerate}
 
+
+
+    \newpage
+
+    \section{Questions No. 2}
+    \begin{enumerate}
+       \item Regarding Bias and Variance: Why shouldn't the predictions change if the training data is being replaced? 
+    \end{enumerate}
 \end{document}
