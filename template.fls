@@ -2,8 +2,8 @@ PWD /Users/leonardbrenk/Documents/Uni/Semester5/seminar
 INPUT /usr/local/texlive/2019/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex
-OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.log
+INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex
+OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.log
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -126,9 +126,9 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlayer.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlayer.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
-INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.aux
-INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.aux
-OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.aux
+INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.aux
+INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.aux
+OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.aux
 INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -170,8 +170,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.toc
-OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.pdf
+OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.toc
+OUTPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.pdf
 INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
@@ -179,7 +179,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.aux
+INPUT /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.aux
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb

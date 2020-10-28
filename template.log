@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  27 OCT 2020 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  28 OCT 2020 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex
-(/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex
+**/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex
+(/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
@@ -367,8 +367,8 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip64
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count110
-) (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.aux)
-\openout1 = `abstract2.aux'.
+) (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.aux)
+\openout1 = `template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
@@ -434,7 +434,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:102: LaTeX Error: File `Logo_Inst_MedInformatik_En_P309' not found.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:102: LaTeX Error: File `Logo_Inst_MedInformatik_En_P309' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -460,7 +460,7 @@ Package pgf Warning: Missing width for image "university-slogan" ("./images/Slog
 
 Package pgf Warning: Missing height for image "university-slogan" ("./images/Slogan_Uni_Luebeck_CMYK") in draft mode. Using 1cm instead on input line 102.
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:102: Missing $ inserted.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:102: Missing $ inserted.
 <inserted text> 
                 $
 l.102 
@@ -472,7 +472,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 102.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 102.
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:102: Extra }, or forgotten $.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:102: Extra }, or forgotten $.
 <recently read> }
                  
 l.102 
@@ -483,7 +483,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:102: Missing $ inserted.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:102: Missing $ inserted.
 <inserted text> 
                 $
 l.102 
@@ -491,7 +491,7 @@ l.102
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:102: Missing } inserted.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:102: Missing } inserted.
 <inserted text> 
                 }
 l.102 
@@ -502,9 +502,9 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-No file abstract2.toc.
+No file template.toc.
 \tf@toc=\write4
-\openout4 = `abstract2.toc'.
+\openout4 = `template.toc'.
 
 
 LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 117.
@@ -529,7 +529,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 132.
 
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:159: LaTeX Error: File `Moodle4' not found.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:159: LaTeX Error: File `Moodle4' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -548,7 +548,7 @@ Overfull \hbox (4.94456pt too wide) in paragraph at lines 159--159
  []
 
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:163: LaTeX Error: File `Moodle4' not found.
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:163: LaTeX Error: File `Moodle4' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -589,7 +589,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--191
  []
 
 
-/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.tex:197: Package inputenc Error: Keyboard character used is undefined
+/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.tex:197: Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `latin1'.
 
 See the inputenc package documentation for explanation.
@@ -602,11 +602,11 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 [2]
-No file abstract2.bbl.
+No file template.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[3] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.aux)
+[3] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -616,14 +616,14 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
  ) 
 Here is how much of TeX's memory you used:
  13625 strings out of 492616
- 291273 string characters out of 6129481
+ 291263 string characters out of 6129481
  467214 words of memory out of 5000000
  17298 multiletter control sequences out of 15000+600000
  9124 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,71p,9140b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,19n,71p,9139b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/abstract2.pdf (3 pages, 107290 bytes).
+Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/template.pdf (3 pages, 107290 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
