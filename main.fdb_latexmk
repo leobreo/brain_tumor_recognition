@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1603904051 "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.tex" "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.pdf" "main" 1603904052
-  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.aux" 1603904052 2219 c2b019e62ac3fcdc7648ebf498a742c2 ""
-  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.tex" 1603904050 852 96b98d792c44528c43ed009f5d4b103d ""
+["pdflatex"] 1603925365 "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.tex" "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.pdf" "main" 1603925390
+  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.aux" 1603925365 1257 24ed23cb18113dafa89c807ceea37bae ""
+  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.tex" 1603925389 673 126f3376376f9a8bf6ecf786a11158dc ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -26,13 +26,13 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1558030521 4259636 972de62f07200b1cf4175b2abbebd317 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "main.aux" 1603904052 2219 c2b019e62ac3fcdc7648ebf498a742c2 "pdflatex"
-  "main.tex" 1603904050 852 96b98d792c44528c43ed009f5d4b103d ""
-  "main.toc" 1603904052 1371 fed3bf5fe26a9bac300c7005528d05f4 "pdflatex"
+  "main.aux" 1603925365 1257 24ed23cb18113dafa89c807ceea37bae "pdflatex"
+  "main.tex" 1603925389 673 126f3376376f9a8bf6ecf786a11158dc ""
+  "main.toc" 1603925365 769 7525fa4837f7a584881f6bcd2d932d64 "pdflatex"
   (generated)
-  "main.pdf"
-  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.pdf"
-  "main.aux"
-  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.log"
   "main.log"
+  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.pdf"
+  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/main.log"
   "main.toc"
+  "main.aux"
+  "main.pdf"
