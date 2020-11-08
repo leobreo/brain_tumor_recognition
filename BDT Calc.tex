@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+
+[\text{yes},\text{no}]
+
+\begin{align*}
+    H(5,9) &= -\Bigg[\frac{5}{14} \log_2\Bigg(\frac{5}{14}\Bigg) + \frac{9}{14} \log_2\Bigg(\frac{9}{14}\Bigg)\Bigg] = 0,9403\\
+\end{align*}
+
+\textbf{Split at Temperature:}
+\begin{align*}
+    \text{Temp = high: } &H(2,5) = -\Bigg[\frac{2}{7} \log_2\Bigg(\frac{2}{14}\Bigg) + \frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg)\Bigg] = 0,8631\\
+    \text{Temp = low: } &H(3,4) = -\Bigg[\frac{3}{7} \log_2\Bigg(\frac{3}{14}\Bigg) + \frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg)\Bigg] = 0,9852\\
+    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(2,5) + \frac{7}{14} H(3,4)\Bigg] = \text{\colorbox{BurntOrange}{0,01615}}
+\end{align*}
+
+\textbf{Split at Rain:}
+\begin{align*}
+    \text{Rain = yes: } &H(0,7) = -\Bigg[\frac{0}{7} \log_2\Bigg(\frac{0}{14}\Bigg) + \frac{7}{7} \log_2\Bigg(\frac{7}{7}\Bigg)\Bigg] = 0\\
+    \text{Rain = no: } &H(5,2) = -\Bigg[\frac{5}{7} \log_2\Bigg(\frac{5}{14}\Bigg) + \frac{2}{7} \log_2\Bigg(\frac{2}{7}\Bigg)\Bigg] = 0,8631\\
+    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(0,7) + \frac{7}{14} H(5,2)\Bigg] = \text{\colorbox{BurntOrange}{0,50875}}
+\end{align*}
+
+\textbf{Split at Windy:}
+\begin{align*}
+    \text{Windy = True: } &H(1,6) = -\Bigg[\frac{1}{7} \log_2\Bigg(\frac{1}{14}\Bigg) + \frac{6}{7} \log_2\Bigg(\frac{6}{7}\Bigg)\Bigg] = 0,5917\\
+    \text{Windy = False: } &H(4,3) = -\Bigg[\frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg) + \frac{3}{7} \log_2\Bigg(\frac{3}{7}\Bigg)\Bigg] = 1,3781\\
+    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(0,7) + \frac{7}{14} H(5,2)\Bigg] = \text{\colorbox{BurntOrange}{0,0446}}
+\end{align*}
+
+\textbf{Split at Humidity:}
+\begin{align*}
+    \text{Humidity = High: } &H(2,5) = -\Bigg[\frac{2}{7} \log_2\Bigg(\frac{2}{14}\Bigg) + \frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg)\Bigg] = 0,8631\\
+    \text{Humidity = Low: } &H(3,4) = -\Bigg[\frac{3}{7} \log_2\Bigg(\frac{3}{14}\Bigg) + \frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg)\Bigg] = 0,9852\\
+    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(2,5) + \frac{7}{14} H(3,4)\Bigg] = \text{\colorbox{BurntOrange}{0,01615}}
+\end{align*}
+\end{document}

@@ -1,6 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{1}% 
-\contentsline {section}{\numberline {2}Seminar-specific Details}{2}% 
-\contentsline {subsection}{\numberline {2.1}Dates}{2}% 
-\contentsline {subsection}{\numberline {2.2}Guidelines}{2}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Presentation}{2}% 
-\contentsline {subsubsection}{\numberline {2.2.2}Paper}{2}% 
