@@ -7,60 +7,88 @@
 [\text{yes},\text{no}]
 
 \begin{align*}
-    H(5,9) &= -\Bigg[\frac{5}{14} \log_2\Bigg(\frac{5}{14}\Bigg) + \frac{9}{14} \log_2\Bigg(\frac{9}{14}\Bigg)\Bigg] = 0,9403\\
+    H(6,8) &= -\Bigg[\frac{6}{14} \log_2\Bigg(\frac{6}{14}\Bigg) + \frac{8}{14} \log_2\Bigg(\frac{8}{14}\Bigg)\Bigg] = 0,9852\\
 \end{align*}
 
 \textbf{Split at Temperature:}
 \begin{align*}
-    \text{Temp = high: } &H(2,5) = -\Bigg[\frac{2}{7} \log_2\Bigg(\frac{2}{14}\Bigg) + \frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg)\Bigg] = 0,8631\\
-    \text{Temp = low: } &H(3,4) = -\Bigg[\frac{3}{7} \log_2\Bigg(\frac{3}{14}\Bigg) + \frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg)\Bigg] = 0,9852\\
-    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(2,5) + \frac{7}{14} H(3,4)\Bigg] = \text{\colorbox{BurntOrange}{0,01615}}
+    \text{Temperature = high: } &H(2,5) = -\Bigg[\frac{2}{7} \log_2\Bigg(\frac{2}{7}\Bigg) + \frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg)\Bigg] = 0,8631\\
+    \text{Temperature = low: } &H(4,3) = -\Bigg[\frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg) + \frac{3}{7} \log_2\Bigg(\frac{3}{7}\Bigg)\Bigg] = 0,9852\\
+    \text{Gain: } &H(6,8) - H\Bigg[\frac{7}{14} H(2,5) + \frac{7}{14} H(4,3)\Bigg] = \text{\colorbox{BurntOrange}{0,01615}}
 \end{align*}
 
 \textbf{Split at Rain:}
 \begin{align*}
-    \text{Rain = yes: } &H(0,7) = -\Bigg[\frac{0}{7} \log_2\Bigg(\frac{0}{14}\Bigg) + \frac{7}{7} \log_2\Bigg(\frac{7}{7}\Bigg)\Bigg] = 0\\
-    \text{Rain = no: } &H(5,2) = -\Bigg[\frac{5}{7} \log_2\Bigg(\frac{5}{14}\Bigg) + \frac{2}{7} \log_2\Bigg(\frac{2}{7}\Bigg)\Bigg] = 0,8631\\
-    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(0,7) + \frac{7}{14} H(5,2)\Bigg] = \text{\colorbox{BurntOrange}{0,50875}}
+    \text{Rain = yes: } &H(0,7) = -\Bigg[\frac{0}{7} \log_2\Bigg(\frac{0}{7}\Bigg) + \frac{7}{7} \log_2\Bigg(\frac{7}{7}\Bigg)\Bigg] = 0\\
+    \text{Rain = no: } &H(6,1) = -\Bigg[\frac{6}{7} \log_2\Bigg(\frac{6}{7}\Bigg) + \frac{1}{7} \log_2\Bigg(\frac{1}{7}\Bigg)\Bigg] = 0,5916\\
+    \text{Gain: } &H(6,8) - H\Bigg[\frac{7}{14} H(0,7) + \frac{7}{14} H(5,2)\Bigg] = \text{\colorbox{BurntOrange}{0,6894}}
 \end{align*}
 
 \textbf{Split at Windy:}
 \begin{align*}
-    \text{Windy = True: } &H(1,6) = -\Bigg[\frac{1}{7} \log_2\Bigg(\frac{1}{14}\Bigg) + \frac{6}{7} \log_2\Bigg(\frac{6}{7}\Bigg)\Bigg] = 0,5917\\
+    \text{Windy = True: } &H(2,5) = -\Bigg[\frac{2}{7} \log_2\Bigg(\frac{2}{7}\Bigg) + \frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg)\Bigg] = 0,8631\\
     \text{Windy = False: } &H(4,3) = -\Bigg[\frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg) + \frac{3}{7} \log_2\Bigg(\frac{3}{7}\Bigg)\Bigg] = 1,3781\\
-    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(0,7) + \frac{7}{14} H(5,2)\Bigg] = \text{\colorbox{BurntOrange}{0,0446}}
+    \text{Gain: } &H(6,8) - H\Bigg[\frac{7}{14} H(2,5) + \frac{7}{14} H(4,3)\Bigg] = \text{\colorbox{BurntOrange}{0,1354}}
 \end{align*}
 
 \textbf{Split at Humidity:}
 \begin{align*}
-    \text{Humidity = High: } &H(2,5) = -\Bigg[\frac{2}{7} \log_2\Bigg(\frac{2}{14}\Bigg) + \frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg)\Bigg] = 0,8631\\
-    \text{Humidity = Low: } &H(3,4) = -\Bigg[\frac{3}{7} \log_2\Bigg(\frac{3}{14}\Bigg) + \frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg)\Bigg] = 0,9852\\
-    \text{Gain: } &H(5,9) - H\Bigg[\frac{7}{14} H(2,5) + \frac{7}{14} H(3,4)\Bigg] = \text{\colorbox{BurntOrange}{0,01615}}
+    \text{Humidity = High: } &H(3,4) = -\Bigg[\frac{3}{7} \log_2\Bigg(\frac{3}{7}\Bigg) + \frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg)\Bigg] = 0,9852\\
+    \text{Humidity = Low: } &H(3,4) = -\Bigg[\frac{3}{7} \log_2\Bigg(\frac{3}{7}\Bigg) + \frac{4}{7} \log_2\Bigg(\frac{4}{7}\Bigg)\Bigg] = 0,9852\\
+    \text{Gain: } &H(6,8) - H\Bigg[\frac{7}{14} H(3,4) + \frac{7}{14} H(3,4)\Bigg] = \text{\colorbox{BurntOrange}{0}}
 \end{align*}
 
 RAIN: No
 
 \begin{align*}
-    H(5,2) &= -\Bigg[\frac{5}{7} \log_2\Bigg(\frac{5}{7}\Bigg) + \frac{2}{7} \log_2\Bigg(\frac{2}{7}\Bigg)\Bigg] = 0,8631\\
+    H(6,1) &= -\Bigg[\frac{6}{7} \log_2\Bigg(\frac{6}{7}\Bigg) + \frac{1}{7} \log_2\Bigg(\frac{1}{7}\Bigg)\Bigg] = 0,5917\\
 \end{align*}
 
 \textbf{Split at Temperature:}
 \begin{align*}
     \text{Temperature = High: } &H(2,0) = -\Bigg[\frac{2}{2} \log_2\Bigg(\frac{2}{2}\Bigg) + \frac{0}{2} \log_2\Bigg(\frac{0}{2}\Bigg)\Bigg] = 0\\
-    \text{Temperature = Low: } &H(3,2) = -\Bigg[\frac{3}{5} \log_2\Bigg(\frac{3}{5}\Bigg) + \frac{2}{5} \log_2\Bigg(\frac{2}{5}\Bigg)\Bigg] = 0,910\\
-    \text{Gain: } &H(5,2) - H\Bigg[\frac{2}{7} H(2,0) + \frac{5}{7} H(3,2)\Bigg] = \text{\colorbox{BurntOrange}{0,2131}}
+    \text{Temperature = Low: } &H(4,1) = -\Bigg[\frac{4}{5} \log_2\Bigg(\frac{4}{5}\Bigg) + \frac{1}{5} \log_2\Bigg(\frac{1}{5}\Bigg)\Bigg] = 0,7220\\
+    \text{Gain: } &H(6,1) - H\Bigg[\frac{2}{7} H(2,0) + \frac{5}{7} H(4,1)\Bigg] = \text{\colorbox{BurntOrange}{0,0760}}
 \end{align*}
 \textbf{Split at Windy:}
 \begin{align*}
-    \text{Windy = True: } &H(1,2) = -\Bigg[\frac{1}{3} \log_2\Bigg(\frac{1}{3}\Bigg) + \frac{2}{3} \log_2\Bigg(\frac{2}{3}\Bigg)\Bigg] = 0,9183\\
+    \text{Windy = True: } &H(2,1) = -\Bigg[\frac{2}{3} \log_2\Bigg(\frac{2}{3}\Bigg) + \frac{1}{3} \log_2\Bigg(\frac{1}{3}\Bigg)\Bigg] = 0,9183\\
     \text{Windy = False: } &H(4,0) = -\Bigg[\frac{4}{4} \log_2\Bigg(\frac{4}{4}\Bigg) + \frac{0}{4} \log_2\Bigg(\frac{0}{4}\Bigg)\Bigg] = 0\\
-    \text{Gain: } &H(5,2) - H\Bigg[\frac{3}{7} H(1,2) + \frac{4}{7} H(4,0)\Bigg] = \text{\colorbox{BurntOrange}{0,4695}}
+    \text{Gain: } &H(6,1) - H\Bigg[\frac{3}{7} H(2,1) + \frac{4}{7} H(4,0)\Bigg] = \text{\colorbox{BurntOrange}{0,4695}}
 \end{align*}
 
 \textbf{Split at Humidity:}
 \begin{align*}
-    \text{Humidtiy = High: } &H(2,1) = -\Bigg[\frac{2}{3} \log_2\Bigg(\frac{2}{3}\Bigg) + \frac{1}{3} \log_2\Bigg(\frac{1}{3}\Bigg)\Bigg] = 0,9183\\
+    \text{Humidtiy = High: } &H(3,0) = -\Bigg[\frac{3}{3} \log_2\Bigg(\frac{3}{3}\Bigg) + \frac{0}{3} \log_2\Bigg(\frac{0}{3}\Bigg)\Bigg] = 0\\
     \text{humidity = Low: } &H(3,1) = -\Bigg[\frac{3}{4} \log_2\Bigg(\frac{3}{4}\Bigg) + \frac{1}{4} \log_2\Bigg(\frac{1}{4}\Bigg)\Bigg] = 0,8113\\
-    \text{Gain: } &H(5,2) - H\Bigg[\frac{3}{7} H(2,1) + \frac{4}{7} H(3,1)\Bigg] < \text{\colorbox{BurntOrange}{0,1}}
+    \text{Gain: } &H(6,1) - H\Bigg[\frac{3}{7} H(2,1) + \frac{4}{7} H(3,1)\Bigg] = \text{\colorbox{BurntOrange}{0,1281}}
+\end{align*}
+
+Rain: no, Windy: True 
+
+\begin{align*}
+    H(2,1) &= -\Bigg[\frac{2}{3} \log_2\Bigg(\frac{2}{3}\Bigg) + \frac{1}{3} \log_2\Bigg(\frac{1}{3}\Bigg)\Bigg] = 0,9183\\
+\end{align*}
+\textbf{Split at Temperature:}
+\begin{align*}
+    \text{Temperature = High: } &H(0,0) = -\Bigg[\frac{0}{0} \log_2\Bigg(\frac{0}{0}\Bigg) + \frac{0}{0} \log_2\Bigg(\frac{0}{0}\Bigg)\Bigg] = 0\\
+    \text{Temperature = Low: } &H(2,1) = -\Bigg[\frac{2}{3} \log_2\Bigg(\frac{2}{3}\Bigg) + \frac{1}{3} \log_2\Bigg(\frac{1}{3}\Bigg)\Bigg] = 0,9183\\
+    \text{Gain: } &H(2,1) - H\Bigg[0 + \frac{3}{3} H(2,1)\Bigg] = \text{\colorbox{BurntOrange}{0}}
+\end{align*}
+
+\textbf{Split at Humidity:}
+\begin{align*}
+    \text{Humidity = High: } &H(2,0) = -\Bigg[\frac{2}{2} \log_2\Bigg(\frac{2}{2}\Bigg) + \frac{0}{2} \log_2\Bigg(\frac{0}{2}\Bigg)\Bigg] = 0\\
+    \text{Humidity = Low: } &H(0,1) = -\Bigg[0 + \frac{1}{1} \log_2\Bigg(\frac{1}{1}\Bigg)\Bigg] = 0\\
+    \text{Gain: } &H(2,1) - H\Bigg[\frac{2}{3} H(2,0) + \frac{1}{3} H(0,1)\Bigg] = \text{\colorbox{BurntOrange}{0,9183}}
+\end{align*}
+
+Rain: no, windy: False
+\begin{align*}
+    H(1,2) &= -\Bigg[\frac{1}{3} \log_2\Bigg(\frac{1}{3}\Bigg) + \frac{2}{3} \log_2\Bigg(\frac{2}{3}\Bigg)\Bigg] = 0,9183\\
+\end{align*}
+
+\begin{align*}
+    DS = \frac{2\text{TP}}{2TP + FP + FN}
 \end{align*}
 \end{document}
