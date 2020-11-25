@@ -1,0 +1,230 @@
+% ----------------------------------------------------
+% Institute of Medical Informatics
+% University of Luebeck
+%
+% Version 0.4
+%
+% ----------------------------------------------------
+
+\documentclass[
+%a4paper,
+12pt,
+headsepline,
+bibliography=totoc,
+twoside=semi,
+fleqn
+]{scrartcl}
+
+\usepackage{pgf}
+\usepackage{ucs}
+\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}
+\graphicspath{{./images/}}
+\usepackage{color}
+%\usepackage{german}
+\usepackage{subfigure}
+\usepackage{booktabs}
+
+%% LAYOUT:
+
+\renewcommand{\descfont}{\bfseries}
+\renewcommand{\sectfont}{\bfseries}
+
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{1.5cm}
+
+\setkomafont{captionlabel}{\bfseries\footnotesize}
+\setkomafont{caption}{\footnotesize}
+\renewcommand{\headfont}{\bfseries}
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}
+
+\renewcommand*{\titlepagestyle}{empty}
+
+\usepackage[automark]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\rehead{\headmark} 
+\lehead{\pagemark} 
+\lohead{\headmark} 
+\rohead{\pagemark}
+
+\definecolor{Ocean}{cmyk}{1,0,0.2,0.78}
+\definecolor{Grey}{cmyk}{0,0,0,0.6}
+
+\usepackage{natbib}
+\bibpunct{[}{]}{;}{a}{}{,}
+
+\begin{document}
+
+%==================================================
+% TITLE PAGE
+% -------------------------------------------------
+
+\setlength{\headheight}{0pt}
+
+\titlehead{
+  \flushleft{\includegraphics[width=0.7\textwidth]{Logo_Inst_MedInformatik_En_P309}}\\[-3.5ex]
+  \centering
+}
+
+\subject{
+\large{
+  \vspace{0ex}
+  \textnormal{Seminar}\\[1ex] 
+  Medical Image Computing and e-Health\\[1ex]
+  \textnormal{WS 2020/2021}\\[8ex]
+}}
+
+\title{
+  \huge{\textcolor{Ocean}{Automatic Detection and Segmentation of Brain Tumor Using Random Forest Approach}}\\[5ex]
+}
+
+\author{
+  \large{\textbf{Leonard Brenk}}\\
+  \large{Matr.-Nr.: 697947, Computer Science}\\[5ex]
+  \large{Supervisor}\\
+  \large{Marja Fleitmann}\\[8ex]
+}
+
+\date{
+  \large{Lübeck, \today}
+  \pgfdeclareimage{university-slogan}{./images/Slogan_Uni_Luebeck_CMYK}
+  \begin{pgfpicture}{0cm}{4cm}{14cm}{1.0cm}
+    \pgfputat{\pgfpoint{10cm}{0cm}}{\pgfbox[left,bottom]{\pgfuseimage{university-slogan}}}
+    \color {white}
+%    \pgfputat{\pgfpoint{12.3cm}{0.4cm}}{\pgfbox[right,center]{  \insertshorttitle}}	
+  \end{pgfpicture}
+}
+
+
+%============================CONTENT=========================
+
+\maketitle
+\newpage
+\setcounter{page}{1}
+\setlength{\headheight}{58pt}
+
+%==================================================
+
+\tableofcontents
+\newpage
+
+%==================================================
+% TEXT
+% -------------------------------------------------
+
+\section{Motivation\label{sec:sec1}}
+The detection and treatment of tumors is one of today's greatest challenges for mankind. Finding mutating cells and preventing them from spreading is an extraordinarily difficult task. Usually tumors occur nested in non-affected tissues which makes their discovery and treatment heavily challenging. The current state of technology operating in that field has complications filtering the negative cells out and segmenting the pure tumor completely. Due to the variety of anatomical structures and the way they can differ from person to person, even for a trained professional it takes a lot of time to detect and fully segment a tumor in MRI scans - even more if three-dimensional scans are used. Therefore not only are the needed financial and personal requirements greatly inefficient but also the outcome can be flawed and incomplete based on the know-how of the experts. Machine Learning ensembles provide a promising approach to face that issue on a global, revolutionary scale.\\
+
+Seeing that finding the tumor in an early stage has the highest impact on and can facilitate and enhance the treatment the detection is the key to success. The paper written by \textcolor{red}{TODO AUTHOR} in 2016 captures an experiment regarding this topic. It carries out a Random Forest based machine learning technique using multispectral volumetric MRI volumes. Training an algorithm to reliably find and segment tumor cells on MRI scans can due to its practically limitless resources in time and memory possibly perform on a higher level than multiple experts. Therefore the data undergoes several steps of pre-processing in order to be suitable for the application in Binary Decision Trees. Furthermore, after the employment of Random Forests the data is post-processed and then analyzed. In order to illustrate the accuracy of a decision the authors introduced a Dice Score, thereby Binary Decision Trees can be compared and graded.\\
+
+The paper presents initial outcomes and recommendations regarding a complex brain tumor detection and segmentation system and its future implementation in a clinical context.
+
+
+\newpage
+
+%--------------------------------------------------
+
+\section{Introduction BDT \& RDF\label{sec:sec2}}
+In this section the essential basics regarding Binary Decision Trees and Random Forest and their implementation are being explained an discussed.
+
+  \subsection{Binary Decision Trees(BDT)\label{sec:sec2-1}}
+  A Binary Decision Tree (BDT) is trained and employed in order to make a decision based on a data vector. It consists of multiple levels of two-way decisions until it reaches a leaf node at the end classifying the vector into a certain class. A BDT can be used to either deploy data into classes of predict values in the future using regression. However, this paper will concentrate on the ability to assign a label to a vector. 
+
+  In order for a BDT to reach a decision it goes through several inner decisions nodes which divide the data into two subgroups and forwards them to the next node.  
+
+
+
+  \subsection{Random Forest(RDF)\label{sec:sec2-2}}
+
+\section{Application\label{sec:sec3}}
+
+  \subsection{Goal of the Paper\label{sec:sec3-1}}
+  \subsection{Data \& Pre-Processing\label{sec:sec3-2}}
+  \subsection{Training and Testing\label{sec:sec3-3}}
+  \subsection{Post-Processing\label{sec:sec3-4}}
+
+\section{Results\label{sec:sec4}}
+
+\section{Conclusion\label{sec:sec5}}
+
+\section{Sources \& Appendix\label{sec.sec5}}
+
+%--------------------------------------------------
+% Example of a figure with subfigures
+%--------------------------------------------------
+
+\newpage
+\begin{figure}[p]
+\centering
+\subfigure[]{
+  \includegraphics[width=\textwidth]{Moodle4}
+  \label{fig:subfig1}
+}
+\subfigure[]{
+  \includegraphics[width=\textwidth]{Moodle4}
+  \label{fig:subfig2}
+}
+\caption{Two times (\subref{fig:subfig1} and \subref{fig:subfig2}) the Moodle page for this seminar.}
+\label{fig:subfigureExample}
+\end{figure}
+
+%--------------------------------------------------
+% Example of a table
+%--------------------------------------------------
+
+
+\begin{table}[t]
+    \footnotesize
+    \caption{\label{tab:table1} Topics of the presentations \textbf{two years ago}.}
+    \vspace{1ex}
+    \centering 
+    \begin{tabular}{p{2.5cm}p{8.7cm}p{2.8cm}}
+        \toprule
+        \textbf{Speaker} & \textbf{Topic [Literature]} & \textbf{Supervisor} \\
+        \midrule
+        J. Niemeijer & Hough transforms & M. Wilms \\
+        D. Labitzke & Optimal Surface Segmentation in Volumetric Images -- A Graph-Theoretic Approach (cf. \citep{Li_TPAMI_2006}) & M. Wilms \\
+        A. Bostelmann & Graph Cuts for image segmentation
+        & O. Maier \\
+        D. Conrad & Texture descriptors and their application to medical images & O. Maier
+        \\
+        E. Franke & Image Segmentation Using Deformable Models: Parametric Deformable
+        Models & J. Kr�ger \\
+        N. Broecker & Image Segmentation Using Deformable Models:Geometric Deformable
+        Models & J. Kr�ger \\
+        L. Pankert & Visualization in Medicine: Volume Rendering with ray-casting
+        & J. Ehrhardt \\
+        T. Langer & Visualization in Medicine: Surface Rendering using the Marching Cubes
+        Algorithm & J. Ehrhardt \\
+        M. Caspe & Volumetric Ultrasound Stitching & D. Fortmeier \\
+        H. T�nnies & Surface-based Palpation Haptics & D. Fortmeier \\
+        \midrule
+        P. Kling & A Content Model for the ICD-11 Revision & J. Ingenerf \\
+        S. Heusel & MeSHy: Mining unanticipated PubMed information using frequencies of
+        occurrences and concurrences of MeSH terms & J. Ingenerf \\
+        K. Soika & What is bioinformatics? An introduction and overview & B. Andersen \\
+        M. Licht & How (not) to protect genomic data privacy in a distributed network: using trail
+        re-identification to evaluate and design anonymity protection systems & J. Ingenerf \\
+        J. Fleckner & Adverse events in medicine: Easy to count, complicated to understand, and
+        complex to prevent & A.-K. Kock \\
+        A. Wiegmann & An automated technique for identifying associations between medications,
+        laboratory results and problems & A.-K. Kock \\
+        J.-H. Mathes & Organization of Heterogeneous Scientific Data Using the EAV/CR
+        Representation & B. Andersen\\
+        F. Simon & Structured Reporting: Patient Care Enhancement or Productivity Nightmare? & A.-K. Kock\\
+        \bottomrule
+    \end{tabular}
+    \vspace{2ex}
+\end{table}
+
+
+%==================================================
+\newpage
+%\bibliographystyle{plain}
+\bibliographystyle{elsarticle-harv}
+\footnotesize\bibliography{bib}
+
+
+\end{document}

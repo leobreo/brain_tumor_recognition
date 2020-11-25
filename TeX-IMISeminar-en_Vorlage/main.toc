@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Motivation}{2}% 
+\contentsline {section}{\numberline {2}Introduction BDT \& RDF}{3}% 
+\contentsline {subsection}{\numberline {2.1}Binary Decision Trees(BDT)}{3}% 
+\contentsline {subsection}{\numberline {2.2}Random Forest(RDF)}{3}% 
+\contentsline {section}{\numberline {3}Application}{3}% 
+\contentsline {subsection}{\numberline {3.1}Goal of the Paper}{3}% 
+\contentsline {subsection}{\numberline {3.2}Data \& Pre-Processing}{3}% 
+\contentsline {subsection}{\numberline {3.3}Training and Testing}{3}% 
+\contentsline {subsection}{\numberline {3.4}Post-Processing}{3}% 
+\contentsline {section}{\numberline {4}Results}{3}% 
+\contentsline {section}{\numberline {5}Conclusion}{3}% 
+\contentsline {section}{\numberline {6}Sources \& Appendix}{3}% 
+\contentsline {section}{\nonumberline References}{4}% 
