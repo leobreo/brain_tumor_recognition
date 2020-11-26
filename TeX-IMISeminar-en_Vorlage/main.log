@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  25 NOV 2020 22:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  26 NOV 2020 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,6 +341,20 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@thisruleclass=\count108
 \@lastruleclass=\count109
 \@thisrulewidth=\dimen157
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count110
+\float@exts=\toks30
+\float@box=\box36
+\@float@everytoks=\toks31
+\@floatcapt=\box37
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen158
+\WF@size=\dimen159
+\c@WF@wrappedlines=\count111
+\WF@box=\box38
+\WF@everypar=\toks32
+Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
 Package: scrlayer-scrpage 2019/02/01 v3.26b KOMA-Script package (end user interface for scrlayer)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlayer.sty
@@ -366,35 +380,35 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip63
 \bibsep=\skip64
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count110
+\c@NAT@ctr=\count112
 ) (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
  ABD: EveryShipout initializing macros (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen158
-\scratchbox=\box36
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen159
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count113
+\scratchdimen=\dimen160
+\scratchbox=\box39
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen161
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks34
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -436,16 +450,16 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 <./images/Logo_Inst_MedInformatik_En_P309.pdf, id=4, 426.79147pt x 113.8112pt>
 File: ./images/Logo_Inst_MedInformatik_En_P309.pdf Graphic file (type pdf)
 <use ./images/Logo_Inst_MedInformatik_En_P309.pdf>
-Package pdftex.def Info: ./images/Logo_Inst_MedInformatik_En_P309.pdf  used on input line 104.
+Package pdftex.def Info: ./images/Logo_Inst_MedInformatik_En_P309.pdf  used on input line 106.
 (pdftex.def)             Requested size: 313.69029pt x 83.65108pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 104.
+(Font)              <17.28> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 104.
+(Font)              <12> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 104.
+(Font)              <14.4> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 104.
+(Font)              <7> on input line 106.
  [1
 
 
@@ -459,56 +473,123 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `main.toc'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
-[2] [3]
-<./images/Moodle4.png, id=28, 1927.2pt x 1033.8625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+[2]
+<./images/BDT1.png, id=25, 676.5275pt x 316.18124pt>
+File: ./images/BDT1.png Graphic file (type png)
+<use ./images/BDT1.png>
+Package pdftex.def Info: ./images/BDT1.png  used on input line 138.
+(pdftex.def)             Requested size: 372.09126pt x 173.9002pt.
+ [3 <./images/BDT1.png>]
+<./images/BDT2.png, id=32, 601.24625pt x 462.72874pt>
+File: ./images/BDT2.png Graphic file (type png)
+<use ./images/BDT2.png>
+Package pdftex.def Info: ./images/BDT2.png  used on input line 148.
+(pdftex.def)             Requested size: 330.68645pt x 254.50159pt.
+<./images/BDT3.png, id=33, 224.5188pt x 56.8524pt>
+File: ./images/BDT3.png Graphic file (type png)
+<use ./images/BDT3.png>
+Package pdftex.def Info: ./images/BDT3.png  used on input line 156.
+(pdftex.def)             Requested size: 123.4857pt x 31.2689pt.
+<./images/BDT4.png, id=34, 582.978pt x 52.0344pt>
+File: ./images/BDT4.png Graphic file (type png)
+<use ./images/BDT4.png>
+Package pdftex.def Info: ./images/BDT4.png  used on input line 157.
+(pdftex.def)             Requested size: 320.63889pt x 28.61899pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+[4 <./images/BDT2.png> <./images/BDT3.png> <./images/BDT4.png>]
+<./images/BDT5.png, id=41, 340.1508pt x 245.718pt>
+File: ./images/BDT5.png Graphic file (type png)
+<use ./images/BDT5.png>
+Package pdftex.def Info: ./images/BDT5.png  used on input line 163.
+(pdftex.def)             Requested size: 238.10393pt x 172.00142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+<./images/BDT8.png, id=42, 317.988pt x 45.771pt>
+File: ./images/BDT8.png Graphic file (type png)
+<use ./images/BDT8.png>
+Package pdftex.def Info: ./images/BDT8.png  used on input line 169.
+(pdftex.def)             Requested size: 222.59007pt x 32.03946pt.
+<./images/BDT7.png, id=43, 477.4638pt x 183.5658pt>
+File: ./images/BDT7.png Graphic file (type png)
+<use ./images/BDT7.png>
+Package pdftex.def Info: ./images/BDT7.png  used on input line 173.
+(pdftex.def)             Requested size: 334.22238pt x 128.49516pt.
+<./images/BDT9.png, id=44, 631.158pt x 259.6902pt>
+File: ./images/BDT9.png Graphic file (type png)
+<use ./images/BDT9.png>
+Package pdftex.def Info: ./images/BDT9.png  used on input line 177.
+(pdftex.def)             Requested size: 441.80759pt x 181.78188pt.
+[5 <./images/BDT5.png> <./images/BDT8.png> <./images/BDT7.png>]
+<./images/BDT11.png, id=52, 272.6988pt x 242.8272pt>
+File: ./images/BDT11.png Graphic file (type png)
+<use ./images/BDT11.png>
+Package pdftex.def Info: ./images/BDT11.png  used on input line 182.
+(pdftex.def)             Requested size: 190.88785pt x 169.97787pt.
+<./images/BDT10.png, id=53, 371.9496pt x 325.215pt>
+File: ./images/BDT10.png Graphic file (type png)
+<use ./images/BDT10.png>
+Package pdftex.def Info: ./images/BDT10.png  used on input line 188.
+(pdftex.def)             Requested size: 260.36293pt x 227.64894pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./images/BDT9.png> <./images/BDT11.png>] [7 <./images/BDT10.png>] [8]
+<./images/Moodle4.png, id=67, 1927.2pt x 1033.8625pt>
 File: ./images/Moodle4.png Graphic file (type png)
 <use ./images/Moodle4.png>
-Package pdftex.def Info: ./images/Moodle4.png  used on input line 164.
+Package pdftex.def Info: ./images/Moodle4.png  used on input line 227.
 (pdftex.def)             Requested size: 448.13095pt x 240.4021pt.
 File: ./images/Moodle4.png Graphic file (type png)
 <use ./images/Moodle4.png>
-Package pdftex.def Info: ./images/Moodle4.png  used on input line 168.
+Package pdftex.def Info: ./images/Moodle4.png  used on input line 231.
 (pdftex.def)             Requested size: 448.13095pt x 240.4021pt.
 
-Overfull \hbox (7.83325pt too wide) in paragraph at lines 164--169
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 227--232
  [][] 
  []
 
 
-Overfull \hbox (7.83325pt too wide) in paragraph at lines 164--169
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 227--232
  [] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 183.
+(Font)              <5> on input line 246.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 []\OT1/cmr/m/n/10 Image Seg-men-ta-tion Us-ing De-formable Mod-
  []
 
-(/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.bbl) [4] [5 <./images/Moodle4.png>] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux) ) 
+(/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.bbl) [9] [10 <./images/Moodle4.png>] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux) ) 
 Here is how much of TeX's memory you used:
- 13637 strings out of 492616
- 292193 string characters out of 6129481
- 464454 words of memory out of 5000000
- 17321 multiletter control sequences out of 15000+600000
+ 13822 strings out of 492616
+ 294975 string characters out of 6129481
+ 467246 words of memory out of 5000000
+ 17488 multiletter control sequences out of 15000+600000
  9739 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,71p,9161b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (6 pages, 304814 bytes).
+ 55i,19n,71p,9161b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (11 pages, 1005711 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
