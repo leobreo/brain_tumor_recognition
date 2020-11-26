@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  26 NOV 2020 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  26 NOV 2020 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -585,49 +585,77 @@ Package pdftex.def Info: ./images/BDT15.png  used on input line 232.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./images/BDT14.png>]
-Underfull \vbox (badness 6220) has occurred while \output is active []
+<./images/BDT16.png, id=78, 656.2116pt x 298.716pt>
+File: ./images/BDT16.png Graphic file (type png)
+<use ./images/BDT16.png>
+Package pdftex.def Info: ./images/BDT16.png  used on input line 248.
+(pdftex.def)             Requested size: 459.34499pt x 209.09976pt.
 
- [10 <./images/BDT15.png>] [11]
-<./images/Moodle4.png, id=85, 1927.2pt x 1033.8625pt>
+Overfull \hbox (11.21404pt too wide) in paragraph at lines 248--249
+ [][][] 
+ []
+
+[10 <./images/BDT15.png>]
+<./images/BDT17.png, id=83, 501.5538pt x 245.718pt>
+File: ./images/BDT17.png Graphic file (type png)
+<use ./images/BDT17.png>
+Package pdftex.def Info: ./images/BDT17.png  used on input line 255.
+(pdftex.def)             Requested size: 351.08527pt x 172.00142pt.
+ [11 <./images/BDT16.png> <./images/BDT17.png>]
+<./images/BDT18.png, id=89, 820.06375pt x 813.0375pt>
+File: ./images/BDT18.png Graphic file (type png)
+<use ./images/BDT18.png>
+Package pdftex.def Info: ./images/BDT18.png  used on input line 262.
+(pdftex.def)             Requested size: 328.01968pt x 325.20924pt.
+<./images/BDT19.png, id=90, 632.1216pt x 307.8702pt>
+File: ./images/BDT19.png Graphic file (type png)
+<use ./images/BDT19.png>
+Package pdftex.def Info: ./images/BDT19.png  used on input line 269.
+(pdftex.def)             Requested size: 442.4821pt x 215.50766pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./images/BDT18.png>] [13 <./images/BDT19.png>]
+<./images/Moodle4.png, id=100, 1927.2pt x 1033.8625pt>
 File: ./images/Moodle4.png Graphic file (type png)
 <use ./images/Moodle4.png>
-Package pdftex.def Info: ./images/Moodle4.png  used on input line 259.
+Package pdftex.def Info: ./images/Moodle4.png  used on input line 288.
 (pdftex.def)             Requested size: 448.13095pt x 240.4021pt.
 File: ./images/Moodle4.png Graphic file (type png)
 <use ./images/Moodle4.png>
-Package pdftex.def Info: ./images/Moodle4.png  used on input line 263.
+Package pdftex.def Info: ./images/Moodle4.png  used on input line 292.
 (pdftex.def)             Requested size: 448.13095pt x 240.4021pt.
 
-Overfull \hbox (7.83325pt too wide) in paragraph at lines 259--264
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 288--293
  [][] 
  []
 
 
-Overfull \hbox (7.83325pt too wide) in paragraph at lines 259--264
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 288--293
  [] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 278.
+(Font)              <5> on input line 307.
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 []\OT1/cmr/m/n/10 Image Seg-men-ta-tion Us-ing De-formable Mod-
  []
 
-(/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.bbl) [12] [13 <./images/Moodle4.png>] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux) ) 
+(/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.bbl) [14] [15 <./images/Moodle4.png>] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux) ) 
 Here is how much of TeX's memory you used:
- 13847 strings out of 492616
- 295433 string characters out of 6129481
- 467312 words of memory out of 5000000
- 17509 multiletter control sequences out of 15000+600000
+ 13871 strings out of 492616
+ 295876 string characters out of 6129481
+ 467348 words of memory out of 5000000
+ 17529 multiletter control sequences out of 15000+600000
  9739 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,71p,9161b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (14 pages, 1605757 bytes).
+Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (16 pages, 2309002 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
