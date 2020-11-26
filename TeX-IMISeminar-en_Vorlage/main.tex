@@ -195,19 +195,51 @@ In this section the essential basics regarding Binary Decision Trees and Random 
     \subsubsection{Pro and Cons of BDT\label{sec:sec2-1-5}}
       A BDT can be used to classify and label data vectors which can be helpful for a lot of problems. As is it not limited to categorical values for classification but can also work with numerical values, a BDT is also able to predict future values through regression curves. Furthermore the technique and structure of a BDT and its decision finding process is intuitive and visualizable. Additionally the data used only requires little data pre-processing \textcolor{red}{TODO WHY}.
 
-      The problem with BDTs is that small changes in data can heavily affect the outcome of the decision. If the tree internalizes every detail of the training data it can overfit. That means that the BDT doesn't reflect the general input data but has adapted to the training data. For instance: If an algorithm was given scans of tumors that are compared to all other existing tumor scans rather dark than the BDT will set this as the general intensity of a tumor scan. Thereby brighter parts of tumors scans that the BDT has not seen yet will not be classified as tumor. In order to face that issue Random Forests have been intoruced.   
-
-
+      The problem with BDTs is that small changes in data can heavily affect the outcome of the decision. If the tree internalizes every detail of the training data it can overfit. That means that the BDT doesn't reflect the general input data but has adapted to the training data. For instance: If an algorithm was given scans of tumors that are compared to all other existing tumor scans rather dark than the BDT will set this as the general intensity of a tumor scan. Thereby brighter parts of tumor scans that the BDT has not seen yet will not be classified as tumor. In order to face that issue Random Forests have been introduced.   
 
   \subsection{Random Forest(RDF)\label{sec:sec2-2}}
+    Random Forest (RDF) overcome the obstacle of overfitting through the use of multiple BDTs. A tested vector is inserted into multiple trees which all yield a decision for that vector. One way to determine the overall final decision is to decide by a majority vote. On individual tree might be overfit at some points in the forest however this does not influence the final decision too much. 
+
+    \subsubsection{Bagging\label{sec:sec2-2-1}}
+    While building a random forest one must build several trees. When for each tree only a subset of the training data is being used, it is called Bagging. Thereby randomness is introduced in the procedure and improves the reliability of the decision. 
+    
+    \begin{figure}[H]
+    \includegraphics[scale=0.4]{BDT12.png}\label{fig:fig12}
+    \includegraphics[scale=0.4]{BDT13.png}\label{fig:fig13}
+    \caption{Bagging(left): Each tree is trained by individual data set, Baggin +XY (right)  Each tree is trained by an individual set of data and features}
+      
+    \end{figure}
+
 
 \section{Application\label{sec:sec3}}
 
   \subsection{Goal of the Paper\label{sec:sec3-1}}
-  \subsection{Data \& Pre-Processing\label{sec:sec3-2}}
-  \subsection{Training and Testing\label{sec:sec3-3}}
-  \subsection{Post-Processing\label{sec:sec3-4}}
+    The paper aims to develop a reliable procedure based on machine learning ensembles to detect tumors on MRI scans in an early stage and segment them. For the execution of the experiment 12 records from the BRATS Data Set were used. Each record belongs to one patient and contains four different MRI scans (T1, T2, T1C, FLAIR) which display the same brain in different ways. Each record consists of approximately 1.5 Mio feature vectors. For every volume there is a truth image containing experts annotations for either an active tumor or edema cells.  The algorithm is supposed to seperated between tumor cells, edema cells and negative cells.
 
+  \subsection{Data \& Pre-Processing\label{sec:sec3-2}}
+    In order to address a three-dimensional pixel, also called voxel, a feature vector is generated. It looks like this:\\
+     
+    \begin{center} $T[x,y,z] = T1[x,y,z], T2[x,y,z], T1C[x,y,z], FLAIR[x,y,z]$\end{center}
+
+    \begin{figure}[H]
+      \centering \includegraphics[scale=0.7]{BDT14.png}\label{fig:fig14}
+      \caption{The Feature vector is generated to address a specific cell in all four cells}
+    \end{figure}
+
+    Before the data is used in training and testing BDTs and RDFs it needs to be pre-processed. The first step is the histogram normalization. A histogram displays the amount of intensity values of a scan. In this case the middle 50$\%$ of the data shall be located between the intensity values $600$ and $800$. Also the minimum value of $200$ and the maximum value of $1200$ are set as boundaries. The second step involves the location of a considered voxel. Since the feature vector does not include any information regarding the voxel's location two more features have to be computed for each scan. The new feature vector will thereby consist of 12 elements. For the computation of the first added feature all direct neighbor voxels in a $3 \times 3 \times 3$-sized Cube are considered. The average intensity value of them is the first new feature value of the vector. The second feature is computed based on the average intensity value of the eight closest voxels of that slice \textcolor{red}{TODO WHAT SLICE} and two closest ones from the neighboring slices. That is what the new feature vector now looks like: 
+
+    \begin{figure}[H]
+      \centering \includegraphics[scale=0.7]{BDT15.png}\label{fig:fig15}
+      \caption{The updated Feature vector contains twelve elements}
+    \end{figure}
+
+    The last step of pre-processing excludes the missing voxels from the average calculations for the neighborhood. Null values would distort the result and must thereby be ignored for the average intensity value. 
+
+  \subsection{Training and Testing\label{sec:sec3-3}}
+    The data is now ready to be used for training BDTs. As explained in section \ref{sec:sec2-1} the tree is built, while the attributes like Rain or Temperature are now T1, T2, etc. As 1.5 Mio vectors are too many to use on training the tree samples have to be selected. When doing so and selecting e.g. 300 samples, then it means that 300 feature vectors representing tumor cells, 300 feature vectors representing edema and 300 feature vectors representing negative cells are used. 
+  
+  \subsection{Post-Processing\label{sec:sec3-4}}
+    Even though the BDT and RDF classifies most of the voxels reliably there are usually some negative cells which are labeled as tumor or edema due to the great variety of normal tissues they can belong to. In order to correct falsely labeled positives for each tumor and edema voxel a 250-voxel neighborhood is defined. The average of these are then compared with a pre-defined threshold which value is debatable. If the intensity of the voxel in question is less than the average intensities, it is relabeled into a negative voxel, if its higher it remains the same.
 \section{Results\label{sec:sec4}}
 
 \section{Conclusion\label{sec:sec5}}
