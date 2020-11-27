@@ -174,21 +174,26 @@ In this section, the essential basics regarding Binary Decision Trees and Random
 
  Since the information gain is the value that needs to be maximized, the information gain is calculated for the remaining attributes as well. For the root node, the attribute is selected that yields the highest information gain. In this case: Rain. 
 
- \begin{center}\includegraphics[scale=0.7]{BDT9.png}\label{fig:fig9}\end{center}
+\includegraphics[scale=0.7]{BDT9.png}\label{fig:fig9}\\%\end{center}\\
 
- Having split the data with rain, two subgroups are created \ref{fig:fig10}. Selecting the attribute for the next split node for a subgroup proceeds exactly like with the root node, only with a smaller set of data. The final tree will then look like this: 
 
- \begin{figure}[H]
- \centering\includegraphics[scale=0.7]{BDT11.png}\label{fig:fig11}
- \caption{The final BDT.}
- \end{figure}
+ Having split the data with rain, two subgroups are created (Fig 5). One with all Rain values 'Yes' and one with 'No' Rain. Selecting the attribute for the next split node for a subgroup proceeds exactly like with the root node, only with a smaller set of data. The two subgroups now look like this: \\
  
 
  \begin{figure}[H]
  \centering\includegraphics[scale=0.7]{BDT10.png}\label{fig:fig10}
  \caption{The two generated subgroups when splitting with Rain at the root node.}
  \end{figure}
- 
+
+ The subgroups are recursively divided as long as there are differences in the subgroups decisions. When this is the case leaf nodes are created to label the inserted vector. If all leaf nodes have been created, the final tree is completely trained. In this case the Temperature is not essential for the decision making process. The tree looks like this:  
+ \newpage
+ \begin{figure}[H]
+    \centering\includegraphics[scale=0.7]{BDT11.png}\label{fig:fig11}
+    \caption{The final BDT.} 
+ \end{figure}
+
+
+
  \subsubsection{Testing a BDT\label{sec:sec2-1-4}}
  After building a BDT, it has to be ensured that it is working correctly and classifies properly. Therefore not all data is used for building the tree, but a part is saved for testing purposes. Now that the BDT is built, we can pick samples of the test data and insert it into the BDT. As this is a supervised learning ensemble, the result is already known and can thereby be compared with the tree's yielded outcome. If it is correct, the tree is working fine. The accuracy characterizing Dice Score is based on testing cases and describes their outcome in a numerical, understandable way. 
 
@@ -210,6 +215,7 @@ In this section, the essential basics regarding Binary Decision Trees and Random
  
  \end{figure}
 
+\newpage
 
 \section{Application\label{sec:sec3}}
 
@@ -222,16 +228,18 @@ In this section, the essential basics regarding Binary Decision Trees and Random
  \begin{center} $T[x,y,z] = T1[x,y,z], T2[x,y,z], T1C[x,y,z], FLAIR[x,y,z]$\end{center}
 
  \begin{figure}[H]
- \centering \includegraphics[scale=0.7]{BDT14.png}\label{fig:fig14}
+ \centering \includegraphics[scale=0.6]{BDT14.png}\label{fig:fig14}
  \caption{The Feature vector is generated to address a specific cell in all four cells}
  \end{figure}
 
  Before the data is used in training and testing BDTs and RDFs, it needs to be pre-processed. The first step is the histogram normalization. A histogram displays the number of intensity values of a scan. In this case, the middle 50$\%$ of the data shall be located between the intensity values of $600$ and $800$. Also, the minimum value of $200$ and the maximum value of $1200$ are set as boundaries. The second step involves the location of a considered voxel. Since the feature vector does not include any information regarding the voxel's location, two more features have to be computed for each scan. The new feature vector will thereby consist of 12 elements. For the computation of the first added feature, all direct neighbor voxels in a $3 \times 3 \times 3$-sized Cube are considered. The average intensity value of them is the first new feature value of the vector. The second feature is computed based on the average intensity value of the eight closest voxels of that slice \textcolor{red}{TODO WHAT SLICE} and two closest ones from the neighboring slices. That is what the new feature vector now looks like: 
 
  \begin{figure}[H]
- \centering \includegraphics[scale=0.7]{BDT15.png}\label{fig:fig15}
+ \centering \includegraphics[scale=0.6]{BDT15.png}\label{fig:fig15}
  \caption{The updated Feature vector contains twelve elements}
  \end{figure}
+
+
 
  The last step of pre-processing excludes the missing voxels from the average calculations for the neighborhood. Null values would distort the result and must thereby be ignored for the average intensity value. 
 
@@ -240,6 +248,8 @@ In this section, the essential basics regarding Binary Decision Trees and Random
  
  \subsection{Post-Processing\label{sec:sec3-4}}
  Even though the BDT and RDF classify most of the voxels reliably, there are usually some negative cells labeled as tumor or edema due to the great variety of normal tissues they can belong to. In order to correct falsely labeled positives for each tumor and edema voxel, a 250-voxel neighborhood is defined. The average of these is then compared with a pre-defined threshold, which value is debatable. If the voxel intensity in question is less than the average intensities, it is relabeled into a negative voxel; it remains the same if it is higher.
+
+ \newpage
 \section{Results\label{sec:sec4}}
 
  The first achievement of this paper's experiment is that the size of a sample used for training a BDT influences the accuracy of the decision. In Figure 10 the increase of the Dice Score is shown per rising number of test cases.
@@ -272,83 +282,43 @@ In this section, the essential basics regarding Binary Decision Trees and Random
 
 \section{Conclusion\label{sec:sec5}}
 
- In conclusion, the automatic detection and segmentation of Brain tumors using the Random Forest Approach yields acceptable results under the right conditions and can well be envisioned in future clinical applications. 
-\section{Sources \& Appendix\label{sec.sec5}}
-
-%--------------------------------------------------
-% Example of a figure with subfigures
-%--------------------------------------------------
+ In conclusion, the automatic detection and segmentation of Brain tumors using the Random Forest Approach yields acceptable results and can well be envisioned in future clinical applications. However the Random Forest must be applied under the right conditions like the right number of volumes used to train and test it. Also other parameters like the size of samples can affect the accuracy of the Forests decision deeply. The future development and application will probably consist of multiple clusters of trees, each trained with individually dedicated volumes. This papers experiment showed that it will be possible to apply Random Forests in the future treatment of tumors. 
 
 \newpage
-\begin{figure}[p]
-\centering
-\subfigure[]{
- \includegraphics[width=\textwidth]{Moodle4}
- \label{fig:subfig1}
-}
-\subfigure[]{
- \includegraphics[width=\textwidth]{Moodle4}
- \label{fig:subfig2}
-}
-\caption{Two times (\subref{fig:subfig1} and \subref{fig:subfig2}) the Moodle page for this seminar.}
-\label{fig:subfigureExample}
-\end{figure}
+\section{References\label{sec.sec5}}
+
 
 %--------------------------------------------------
 % Example of a table
 %--------------------------------------------------
 
 
-\begin{table}[t]
+\begin{table}[H]
  \footnotesize
- \caption{\label{tab:table1} Topics of the presentations \textbf{two years ago}.}
+% \caption{\label{tab:table1} Topics of the presentations \textbf{two years ago}.}
  \vspace{1ex}
  \centering 
  \begin{tabular}{p{2.5cm}p{8.7cm}p{2.8cm}}
  \toprule
- \textbf{Speaker} & \textbf{Topic [Literature]} & \textbf{Supervisor} \\
+ \textbf{Author} & \textbf{Literature} & \textbf{Release} \\
  \midrule
- J. Niemeijer & Hough transforms & M. Wilms \\
- D. Labitzke & Optimal Surface Segmentation in Volumetric Images -- A Graph-Theoretic Approach (cf. \citep{Li_TPAMI_2006}) & M. Wilms \\
- A. Bostelmann & Graph Cuts for image segmentation
- & O. Maier \\
- D. Conrad & Texture descriptors and their application to medical images & O. Maier
- \\
- E. Franke & Image Segmentation Using Deformable Models: Parametric Deformable
- Models & J. Kr�ger \\
- N. Broecker & Image Segmentation Using Deformable Models:Geometric Deformable
- Models & J. Kr�ger \\
- L. Pankert & Visualization in Medicine: Volume Rendering with ray-casting
- & J. Ehrhardt \\
- T. Langer & Visualization in Medicine: Surface Rendering using the Marching Cubes
- Algorithm & J. Ehrhardt \\
- M. Caspe & Volumetric Ultrasound Stitching & D. Fortmeier \\
- H. T�nnies & Surface-based Palpation Haptics & D. Fortmeier \\
- \midrule
- P. Kling & A Content Model for the ICD-11 Revision & J. Ingenerf \\
- S. Heusel & MeSHy: Mining unanticipated PubMed information using frequencies of
- occurrences and concurrences of MeSH terms & J. Ingenerf \\
- K. Soika & What is bioinformatics? An introduction and overview & B. Andersen \\
- M. Licht & How (not) to protect genomic data privacy in a distributed network: using trail
- re-identification to evaluate and design anonymity protection systems & J. Ingenerf \\
- J. Fleckner & Adverse events in medicine: Easy to count, complicated to understand, and
- complex to prevent & A.-K. Kock \\
- A. Wiegmann & An automated technique for identifying associations between medications,
- laboratory results and problems & A.-K. Kock \\
- J.-H. Mathes & Organization of Heterogeneous Scientific Data Using the EAV/CR
- Representation & B. Andersen\\
- F. Simon & Structured Reporting: Patient Care Enhancement or Productivity Nightmare? & A.-K. Kock\\
- \bottomrule
+ Zoltán Kapás & Automatic Detection and Segmentation of Brain Tumor Using Random Forest Approach & 2016 \\
+ Ralf Moeller & Vorlesung Einführung in Web und Data Science & 2018 \\
+ A. Criminisi & Decision Forests for Classification, Regression, Density, Esimation, Manifold, Learning and Semi-Supervised Learning & 2011 \\
+ Kahild Usman & Brain tumor classification from multi-modality MRI using wavelets and machine learning & 2017 \\
+ Wikipedia & Random Forest & 2020
+
+ %\bottomrule
  \end{tabular}
  \vspace{2ex}
 \end{table}
 
 
 %==================================================
-\newpage
+%\newpage
 %\bibliographystyle{plain}
-\bibliographystyle{elsarticle-harv}
-\footnotesize\bibliography{bib}
+%\bibliographystyle{elsarticle-harv}
+%\footnotesize\bibliography{bib}
 
 
 \end{document}

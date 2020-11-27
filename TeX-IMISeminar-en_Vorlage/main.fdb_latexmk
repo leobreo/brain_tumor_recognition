@@ -1,14 +1,7 @@
 # Fdb version 3
-["bibtex main"] 1606401097 "main.aux" "main.bbl" "main" 1606402166
-  "/usr/local/texlive/2019/texmf-dist/bibtex/bst/elsarticle/elsarticle-harv.bst" 1547588224 30000 d75617381d8982482f92daf61317af4c ""
-  "bib.bib" 1434621620 440 427c141e0e648ba62857243b41db6fb3 ""
-  "main.aux" 1606402165 6289 393b04be43bc85e0f1ed17cd59a3d2b2 "pdflatex"
-  (generated)
-  "main.blg"
-  "main.bbl"
-["pdflatex"] 1606402163 "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.tex" "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf" "main" 1606402166
-  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux" 1606402165 6289 393b04be43bc85e0f1ed17cd59a3d2b2 ""
-  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.tex" 1606402162 22687 d67a71a3970c6b150a4e13185ecd6a3f ""
+["pdflatex"] 1606480688 "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.tex" "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf" "main" 1606480703
+  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux" 1606480690 5276 be896e5d9f9356714ac508b699e72c50 ""
+  "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.tex" 1606480702 21724 b25854ab1c295488f775d0d92d2f2d0a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -130,7 +123,7 @@
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1558030521 4259636 972de62f07200b1cf4175b2abbebd317 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
   "images/BDT1.png" 1606380743 204645 6a09c9101b46df50e009bdbec166cea8 ""
-  "images/BDT10.png" 1606384654 128684 b7964c8658fffcb89a64ff2d1f8eaaf3 ""
+  "images/BDT10.png" 1606480339 128985 1b693c022c86d0e824d6ce7aab986ffa ""
   "images/BDT11.png" 1606384664 44335 129b0187eb42a17622a51a4c9dc43f0c ""
   "images/BDT12.png" 1606394420 248554 a7ec9bfdfea6d1232db325d7c512b879 ""
   "images/BDT13.png" 1606395036 232592 74d18347930c041b38906c4e9d155ea6 ""
@@ -148,16 +141,14 @@
   "images/BDT8.png" 1606383888 19821 c8450810a89a2c314d0b5cfb406cb61e ""
   "images/BDT9.png" 1606384384 170487 8d2df7b25b98e4e9fe07097f65305ee4 ""
   "images/Logo_Inst_MedInformatik_En_P309.pdf" 1434621620 555479 f623b8c3adb6c1f7b6ef24b781d991b4 ""
-  "images/Moodle4.png" 1436527382 223275 bf60d968cbe786495ba57964fb7d96e7 ""
   "images/Slogan_Uni_Luebeck_CMYK.pdf" 1434621620 12616 bda771c3fa87e2b4c1683b5dcd9ecef9 ""
-  "main.aux" 1606402165 6289 393b04be43bc85e0f1ed17cd59a3d2b2 "pdflatex"
-  "main.bbl" 1606401097 1034 70697aaec1d338347da7f511f1a2eb47 "bibtex main"
-  "main.tex" 1606402162 22687 d67a71a3970c6b150a4e13185ecd6a3f ""
-  "main.toc" 1606402165 1248 ffa8813d5b26d811b5efaddf39b94ecd "pdflatex"
+  "main.aux" 1606480690 5276 be896e5d9f9356714ac508b699e72c50 "pdflatex"
+  "main.tex" 1606480702 21724 b25854ab1c295488f775d0d92d2f2d0a ""
+  "main.toc" 1606480690 1183 4039b1705d4f79376da26117a5109406 "pdflatex"
   (generated)
+  "main.aux"
   "main.toc"
   "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.log"
   "main.pdf"
-  "main.log"
-  "main.aux"
   "/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf"
+  "main.log"

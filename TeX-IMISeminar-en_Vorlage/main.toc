@@ -6,14 +6,13 @@
 \contentsline {subsubsection}{\numberline {2.1.3}Example BDT}{5}% 
 \contentsline {subsubsection}{\numberline {2.1.4}Testing a BDT}{7}% 
 \contentsline {subsubsection}{\numberline {2.1.5}Pro and Cons of BDT}{7}% 
-\contentsline {subsection}{\numberline {2.2}Random Forest(RDF)}{8}% 
+\contentsline {subsection}{\numberline {2.2}Random Forest(RDF)}{7}% 
 \contentsline {subsubsection}{\numberline {2.2.1}Bagging}{8}% 
-\contentsline {section}{\numberline {3}Application}{8}% 
-\contentsline {subsection}{\numberline {3.1}Goal of the Paper}{8}% 
-\contentsline {subsection}{\numberline {3.2}Data \& Pre-Processing}{8}% 
+\contentsline {section}{\numberline {3}Application}{9}% 
+\contentsline {subsection}{\numberline {3.1}Goal of the Paper}{9}% 
+\contentsline {subsection}{\numberline {3.2}Data \& Pre-Processing}{9}% 
 \contentsline {subsection}{\numberline {3.3}Training and Testing}{10}% 
 \contentsline {subsection}{\numberline {3.4}Post-Processing}{10}% 
-\contentsline {section}{\numberline {4}Results}{10}% 
+\contentsline {section}{\numberline {4}Results}{11}% 
 \contentsline {section}{\numberline {5}Conclusion}{13}% 
-\contentsline {section}{\numberline {6}Sources \& Appendix}{13}% 
-\contentsline {section}{\nonumberline References}{14}% 
+\contentsline {section}{\numberline {6}References}{14}% 
