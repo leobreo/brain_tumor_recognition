@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  27 NOV 2020 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  27 NOV 2020 13:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,31 +604,28 @@ Overfull \hbox (11.21404pt too wide) in paragraph at lines 258--259
  [][][] 
  []
 
-<./images/BDT17.png, id=83, 501.5538pt x 245.718pt>
+[11 <./images/BDT16.png>]
+<./images/BDT17.png, id=87, 501.5538pt x 245.718pt>
 File: ./images/BDT17.png Graphic file (type png)
 <use ./images/BDT17.png>
-Package pdftex.def Info: ./images/BDT17.png  used on input line 265.
+Package pdftex.def Info: ./images/BDT17.png  used on input line 267.
 (pdftex.def)             Requested size: 351.08527pt x 172.00142pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./images/BDT16.png>]
 <./images/BDT18.png, id=88, 820.06375pt x 813.0375pt>
 File: ./images/BDT18.png Graphic file (type png)
 <use ./images/BDT18.png>
-Package pdftex.def Info: ./images/BDT18.png  used on input line 272.
+Package pdftex.def Info: ./images/BDT18.png  used on input line 274.
 (pdftex.def)             Requested size: 328.01968pt x 325.20924pt.
  [12 <./images/BDT17.png> <./images/BDT18.png>]
 <./images/BDT19.png, id=95, 632.1216pt x 307.8702pt>
 File: ./images/BDT19.png Graphic file (type png)
 <use ./images/BDT19.png>
-Package pdftex.def Info: ./images/BDT19.png  used on input line 279.
+Package pdftex.def Info: ./images/BDT19.png  used on input line 281.
 (pdftex.def)             Requested size: 442.4821pt x 215.50766pt.
  [13 <./images/BDT19.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 301.
+(Font)              <5> on input line 303.
 
-Underfull \hbox (badness 1142) in paragraph at lines 307--307
+Underfull \hbox (badness 1142) in paragraph at lines 309--309
 []\OT1/cmr/m/n/10 Decision Forests for Clas-si-fi-ca-tion, Re-gres-sion, Den-
  []
 
@@ -642,7 +639,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  55i,19n,70p,9161b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (15 pages, 2124375 bytes).
+Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (15 pages, 2124373 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
