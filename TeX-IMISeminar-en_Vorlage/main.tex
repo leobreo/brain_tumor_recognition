@@ -172,8 +172,9 @@ In this section, the essential basics regarding BDT and RDF and their implementa
  
  
  \begin{table}[]
-   \begin{tabular}{l|l|l|l||l}
-    Temperature & Rain & Windy & Humidity & Go outside? \\
+   \begin{tabular}{|l|l|l|l||l|}
+      \hline
+      Temperature & Rain & Windy & Humidity & Go outside? \\
     \hline
     \hline
     High & Yes & True & High & No \\
@@ -201,7 +202,8 @@ In this section, the essential basics regarding BDT and RDF and their implementa
     High&  Yes&  False& Low & No \\
     Low&  No& True& High & Yes\\
     \hline
-    High& Yes & False & High & No
+    High& Yes & False & High & No\\
+    \hline
    \end{tabular}
    \label{fig:fig5}
    \caption{A BDT can be built from a table like such.}
@@ -216,24 +218,73 @@ In this section, the essential basics regarding BDT and RDF and their implementa
    H(X)= - \biggl[\frac{6}{14}\log_2(\frac{6}{14}+\frac{8}{14}\log_2(\frac{8}{14})\biggr]=0,9852
 \end{equation}  
 
- If we were to split at Temperature, the table would be divided into two groups, one with high temperature and one with low temperature. As it has a binary result there is no need to calculate a threshold. Now the entropy for both of these subgroups needs to be calculated individually. The information gain for Temperature is the difference resulting from the complete entropy minus the average entropy of the newly generated subgroups. In this case, the information gain is $0,01615$. 
+ If we were to split at Temperature, the table would be divided into two groups, one with high temperature and one with low temperature. As it has a binary result there is no need to calculate a threshold. Now the entropy for both of these subgroups needs to be calculated individually. The information gain for Temperature is the difference resulting from the complete entropy minus the average entropy of the newly generated subgroups. In this case the information gain is $0.01615$. 
 
- \begin{center}\includegraphics[scale=0.7]{BDT7.png}\label{fig:fig7}\end{center}
+ \begin{equation}\label{fig:fig7}
+   \begin{split}
+   Temperature=high: H(2,5)= -\biggl[\frac{2}{7}\log_2(\frac{2}{7}+\frac{5}{7}\log_2(\frac{5}{7})\biggr]=0,8631
+   \\
+   Temperature=low: H(4,3)= -\biggl[\frac{4}{7}\log_2(\frac{4}{7}+\frac{3}{7}\log_2(\frac{3}{7})\biggr]=0,9852
+   \\
+   Gain: H(2,5)= -\biggl[\frac{7}{14}H(2,5)+\frac{7}{14}H(4,3)\biggr]=0,01615
+\end{split}
+\end{equation}  
 
- Since the information gain is the value that needs to be maximized, the information gain is calculated for the remaining attributes as well. For the root node, the attribute is selected that yields the highest information gain. In this case: Rain. 
+Since the information gain is the value that needs to be maximized the information gain is calculated for the remaining attributes as well. For the root node the attribute is selected that yields the highest information gain. In this case: Rain. 
+Having split the data with rain, two subgroups are created (Fig 5). One with all Rain values 'Yes' and one with 'No' Rain. Selecting the attribute for the next split node for a subgroup proceeds exactly like with the root node only with a smaller set of data.
 
-\includegraphics[scale=0.7]{BDT9.png}\label{fig:fig9}\\%\end{center}\\
 
+\begin{table}[h!]
+   \begin{tabular}{|l|l|l|l||l|}
+      \hline
+      Temperature & Rain & Windy & Humidity & Go outside? \\
+    \hline
+    \hline
+    High & Yes & True & High & No \\
+    \hline
+    High&  Yes& False & Low & No \\
+    \hline
+    Low& Yes & True & Low & No \\
+    \hline
+    Low&  Yes& True & High & No \\
+    \hline
+    High&  Yes& True & High &  No\\
+    \hline
+    High&  Yes&  False& Low & No \\
+    \hline
+    High& Yes & False & High & No\\
+    \hline
+   \end{tabular}
+   \label{fig:fig101}
+   \end{table}
 
- Having split the data with rain, two subgroups are created (Fig 5). One with all Rain values 'Yes' and one with 'No' Rain. Selecting the attribute for the next split node for a subgroup proceeds exactly like with the root node, only with a smaller set of data. The two subgroups now look like this: \\
- 
+   \begin{table}[h]
+      \begin{tabular}{|l|l|l|l||l|}
+      \hline
+         Temperature & Rain & Windy & Humidity & Go outside? \\
+       \hline
+       \hline
+      Low& No & False & Low & Yes \\
+      \hline
+      Low& No & True & Low & No \\
+      \hline
+      High& No & False &  High& Yes \\
+      \hline
+      High& No &  False&  Low& Yes \\
+      \hline
+      Low&  No& True & High &  Yes\\
+      \hline
+      Low&  No&  False& Low & Yes \\
+      \hline
+      Low&  No& True& High & Yes\\
+      \hline
+      \end{tabular}
+      \label{fig:fig102}
+      \caption{The two generated subgroups when splitting with Rain at the root node.}
+      \end{table}
 
- \begin{figure}[H]
- \centering\includegraphics[scale=0.7]{BDT10.png}\label{fig:fig10}
- \caption{The two generated subgroups when splitting with Rain at the root node.}
- \end{figure}
+ The subgroups are recursively divided as long as there are differences in the subgroups decisions. When this is the case leaf nodes are created to label the inserted vector. If all leaf nodes have been created, the final tree is completely trained. In this case the Temperature is not essential for the decision making process.
 
- The subgroups are recursively divided as long as there are differences in the subgroups decisions. When this is the case leaf nodes are created to label the inserted vector. If all leaf nodes have been created, the final tree is completely trained. In this case the Temperature is not essential for the decision making process. The tree looks like this:  
  \newpage
  \begin{figure}[H]
     \centering\includegraphics[scale=0.7]{BDT11.png}\label{fig:fig11}
@@ -243,48 +294,49 @@ In this section, the essential basics regarding BDT and RDF and their implementa
 
 
  \subsubsection{Testing a BDT\label{sec:sec2-1-4}}
- After building a BDT, it has to be ensured that it is working correctly and classifies properly. Therefore not all data is used for building the tree, but a part is saved for testing purposes. Now that the BDT is built, we can pick samples of the test data and insert it into the BDT. As this is a supervised learning ensemble, the result is already known and can thereby be compared with the tree's yielded outcome. If it is correct, the tree is working fine. The accuracy characterizing Dice Score is based on testing cases and describes their outcome in a numerical, understandable way. 
+ After building a BDT, it has to be ensured that it is working correctly and classifies properly. Therefore not all data is used for building the tree, but a part is saved for testing purposes. Now that the BDT is built, we can pick samples of the test data and insert it into the BDT. As this is a supervised learning method, the result is already known and can thereby be compared with the tree's yielded outcome. If it is correct, the tree is working fine.  
 
  \subsubsection{Pro and Cons of BDT\label{sec:sec2-1-5}}
- A BDT can be used to classify and label data vectors, which can help many problems. As it is not limited to categorical values for classification but can also work with numerical values, a BDT can also predict future values through regression curves. Furthermore, the technique and structure of a BDT and its decision finding process is intuitive and visualizable. Additionally, the data used only requires little data pre-processing \textcolor{red}{TODO WHY}.
+ A BDT can be used to classify and label data vectors, which can help many problems. As it is not limited to categorical values for classification but can also work with numerical values, a BDT can also predict future values through regression curves. Furthermore, the technique and structure of a BDT and its decision finding process is intuitive and visualizable. Additionally, the data used only requires little data pre-processing.
 
  The problem with BDTs is that small changes in data can heavily affect the outcome of the decision. If the tree internalizes every detail of the training data, it can overfit. That means that the BDT does not reflect the general input data but has adapted to the training data. For instance: If an algorithm was given scans of tumors that are compared to all other existing tumor scans rather dark, then the BDT will set this as the general intensity of a tumor scan. Thereby brighter parts of tumor scans that the BDT has not seen will not be classified as a tumor. In order to face that issue, Random Forests have been introduced. 
 
- \subsection{Random Forest(RDF)\label{sec:sec2-2}}
- Random Forest (RDF) overcome the obstacle of overfitting through the use of multiple BDTs. A tested vector is inserted into multiple trees, which all yield a decision for that vector. One way to determine the overall final decision is to decide by a majority vote. An individual tree might be overfitted at some points in the forest; however, this does not influence the final decision too much. 
+ \subsection{Random Forest\label{sec:sec2-2}}
+   RDF overcome the obstacle of overfitting through the use of multiple BDTs and randomness. A tested vector is inserted into multiple trees, which all yield a decision for that vector. One way to determine the overall final decision is to decide by a majority vote. An individual tree might be overfit at some points in the forest, however, this does not influence the final decision too much. One way to increase accuracy through multiple trees is called Bagging.
 
  \subsubsection{Bagging\label{sec:sec2-2-1}}
- While building a random forest, one must build several trees. When for each tree, only a subset of the training data is being used, it is called Bagging. Thereby randomness is introduced in the procedure and improves the reliability of the decision. 
+ While building a random forest, several trees have to be built. When for each tree, only a subset of the training data is being used, it is called Bagging. Thereby randomness is introduced in the procedure and improves the reliability of the decision. Additional to bagging there are similar approaches like randomized node optimization which uses a subset of features instead of a subset of training data.  
  
  \begin{figure}[H]
  \includegraphics[scale=0.4]{BDT12.png}\label{fig:fig12}
  \includegraphics[scale=0.4]{BDT13.png}\label{fig:fig13}
  \caption{Bagging(left): Each tree is trained by individual data set, Baggin +XY (right) Each tree is trained by an individual set of data and features}
- 
+
  \end{figure}
 
+RDF can be described and influenced by many parameters like the size of the forest meaning the number of trees. Many papers state that the larger a forest gets, the more accurate its decision will be, up to a certain cutoff. Another aspect is the depth of an individual tree so the number of split nodes it contains. Sometimes deep trees can be prone to overfit, which can be faced with using more training data. Also the number of smaples used in training a RDF can be important to consider.
 \newpage
 
 \section{Application\label{sec:sec3}}
 
  \subsection{Goal of the Paper\label{sec:sec3-1}}
- The paper aims to develop a reliable procedure based on machine learning ensembles to detect tumors on MRI scans in an early stage and segment them. For the execution of the experiment, 12 records from the BRATS Data Set were used. Each record belongs to one patient and contains four different MRI scans (T1, T2, T1C, FLAIR), which display the same brain in different ways. Each record consists of approximately 1.5 Mio feature vectors. There is a truth image containing expert annotations for either an active tumor or edema cells for every volume. The algorithm is supposed to separate tumor cells, edema cells, and negative cells.
+ The paper aims to develop a reliable procedure based on machine learning ensembles to detect tumors on MRI scans in an early stage and segment them. For the execution of the experiment, 12 records from the Multimodal Brain Tumor Segmentation Challenge(BRATS) Data Set were used. Within the 2012 MICCAI conference the BRATS provided manually pro-delinated records next to realistically generated synthetic brain tumor datasets. In this experiment each record belongs to one patient and contains four different MRI scans (T1, T2, T1C, FLAIR), which display the same brain in different ways. Each record consists of approximately 1.5 Mio feature vectors. There is a truth image containing expert annotations for either an active tumor or edema cells for every volume. The algorithm is supposed to separate tumor cells, edema cells, and negative cells.
 
- \subsection{Data \& Pre-Processing\label{sec:sec3-2}}
- In order to address a three-dimensional pixel, also called voxel, a feature vector is generated. It looks like this:\\
+ \subsection{Data and Pre-Processing\label{sec:sec3-2}}
+ In order to address a voxel, a feature vector is generated. This process is visualized in the following graphic.\\
  
- \begin{center} $T[x,y,z] = T1[x,y,z], T2[x,y,z], T1C[x,y,z], FLAIR[x,y,z]$\end{center}
+ \begin{center} $T[x,y,z] = \biggl[T1[x,y,z], T2[x,y,z], T1C[x,y,z], FLAIR[x,y,z]\biggr]$\end{center}
 
  \begin{figure}[H]
  \centering \includegraphics[scale=0.6]{BDT14.png}\label{fig:fig14}
- \caption{The Feature vector is generated to address a specific cell in all four cells}
+ \caption{The Feature vector is generated to address a specific cell in all four cells.}
  \end{figure}
 
- Before the data is used in training and testing BDTs and RDFs, it needs to be pre-processed. The first step is the histogram normalization. A histogram displays the number of intensity values of a scan. In this case, the middle 50$\%$ of the data shall be located between the intensity values of $600$ and $800$. Also, the minimum value of $200$ and the maximum value of $1200$ are set as boundaries. The second step involves the location of a considered voxel. Since the feature vector does not include any information regarding the voxel's location, two more features have to be computed for each scan. The new feature vector will thereby consist of 12 elements. For the computation of the first added feature, all direct neighbor voxels in a $3 \times 3 \times 3$-sized Cube are considered. The average intensity value of them is the first new feature value of the vector. The second feature is computed based on the average intensity value of the eight closest voxels of that slice \textcolor{red}{TODO WHAT SLICE} and two closest ones from the neighboring slices. That is what the new feature vector now looks like: 
+ Before the data is used in training and testing BDTs and RDFs, it needs to be pre-processed and translated into a shared format the BDT understands. The first step is the histogram normalization. A histogram displays the number of occurences of specific intensity values. In this case, the middle 50$\%$ of the data is supposed to be located between the intensity values of $600$ and $800$. Also, the minimum value of $200$ and the maximum value of $1200$ are set as boundaries. The second step involves the neighborhood of a considered voxel. Since the feature vector does not include any information regarding the voxel's location, two more features have to be computed for each scan. The new feature vector will thereby consist of 12 elements. For the computation of the first added feature, all direct neighbor voxels in a $3 \times 3 \times 3$-sized Cube are considered. The average intensity value of them is the first new feature value of the vector. The second feature is computed based on the average intensity value of the eight closest voxels of that slice and two closest ones from the neighboring slices. 
 
  \begin{figure}[H]
  \centering \includegraphics[scale=0.6]{BDT15.png}\label{fig:fig15}
- \caption{The updated Feature vector contains twelve elements}
+ \caption{The updated Feature vector contains twelve elements.}
  \end{figure}
 
 
@@ -292,22 +344,23 @@ In this section, the essential basics regarding BDT and RDF and their implementa
  The last step of pre-processing excludes the missing voxels from the average calculations for the neighborhood. Null values would distort the result and must thereby be ignored for the average intensity value. 
 
  \subsection{Training and Testing\label{sec:sec3-3}}
- The data is now ready to be used for training BDTs. As explained in section \ref{sec:sec2-1} the tree is built, while the attributes like Rain or Temperature are now T1, T2, etc. As 1.5 Mio vectors are too many to use on training, the tree samples have to be selected. When selecting, e.g., 300 samples, then it means that 300 feature vectors representing tumor cells, 300 feature vectors representing edema, and 300 feature vectors representing negative cells are used. 
+ The data is now ready to be used for training BDTs. Compared to the above mentioned example the attributes are now T1, T2, etc. As 1.5 Mio vectors are too many to use on training, the tree samples have to be selected. In the experiment 300 samples of each label are selected.
  
  \subsection{post-Processing\label{sec:sec3-4}}
- Even though the BDT and RDF classify most of the voxels reliably, there are usually some negative cells labeled as tumor or edema due to the great variety of normal tissues they can belong to. In order to correct falsely labeled positives for each tumor and edema voxel, a 250-voxel neighborhood is defined. The average of these is then compared with a pre-defined threshold, which value is debatable. If the voxel intensity in question is less than the average intensities, it is relabeled into a negative voxel; it remains the same if it is higher.
+ Even though the BDT and RDF classify most of the voxels reliably, there are usually some negative cells labeled as tumor or edema due to the great variety of normal tissues they can belong to. In order to correct falsely labeled positives for each tumor and edema voxel, a 250-voxel neighborhood is defined. The number of voxels which are labeled the same is then compared with a pre-defined threshold, which value is debatable. If the voxel intensity in question is less than the average intensities, it is relabeled into a negative voxel; it remains the same if it is higher.
 
  \newpage
-\section{Results\label{sec:sec4}}
+\section{Experiments and Results\label{sec:sec4}}
 
- The first achievement of this paper's experiment is that the size of a sample used for training a BDT influences the accuracy of the decision. In Figure 10 the increase of the Dice Score is shown per rising number of test cases.
+ In the paper different experiments were conducted. The tool used to compare their accuracy is called Dice Score which mapes the accuracy on a scale from zero to one where one means very accurate. 
+ The first achievement of this paper's experiment is that the size of a sample used for training a BDT influences the accuracy of the decision. In Figure 7 the increase of the Dice Score is shown per rising number of test cases. That shows that increasing the number of samples up to a certain point between 1000 and 5000, leads to a rise in accuray.
  
  \begin{figure}[H]
  \centering \includegraphics[scale=0.7]{BDT16.png}\label{fig:test}
  \caption{The sample size can influence the Dice Score}
  \end{figure} 
 
- The second result shows that training a RDF with volume $a$ and testing with volume $b$ does not yield the same outcome concerning accuracy as training with volume $b$ and testing with $a$. That means that there is no symmetry regarding training and testing with volumes. Figure 11 shows the table's left side shows Dice Scores after training with just one volume and testing with all others, while the right site is the other way around. It should be emphasized that the right site draws a higher overall score. This shows that training a whole RDF with just one volume does not yield acceptable results, while training with all volumes but one can be possible. 
+ The second result shows the dice scores when training a RDF with volume $a$ and testing with volume $b$ and another training with volume $b$ and testing with $a$. The table does not shown symmetry regarding training and testing with volumes. It should be emphasized that the right site draws a higher overall score. 
 
 \newpage
 
@@ -316,23 +369,19 @@ In this section, the essential basics regarding BDT and RDF and their implementa
  \caption{Training and testing is not symmetric}
  \end{figure} 
 
- The following charts concern the effect of post-processing. Looking at the blue diagrams, it becomes clear that Post-Processing can be highly beneficial for increasing the Dice Score. In the lower graphs, the Dice Score is drawn depending on how the threshold for the 250-voxel neighborhood. One can say that a threshold around 200 yields the most promising results. 
+ The following charts concern the effect of post-processing. Looking at the blue diagrams, it becomes clear that Post-Processing can be highly beneficial for increasing the Dice Score. In the lower graphs, the Dice Score is drawn depending on how the threshold for the 250-voxel neighborhood. A threshold around 200 yields the most promising results. 
 
- \begin{figure}[H]
- \centering \includegraphics[scale=0.4]{BDT18.png}\label{fig:fig18}
- \caption{The effect of Post-Processing}
- \end{figure} 
 
- In Figure 13, two MRI scans are shown, one without Post-processing (left) and one with Post-Processing (right). What stands out is that Post-Processing finds non-affected cells in between tumor cells that would have been labeled positive. That gives a more detailed and concise scan, which can facilitate and enhance the tumor's treatment. 
+ In Figure 9 two MRI scans are shown, one without Post-processing (left) and one with Post-Processing (right). What stands out is that Post-Processing finds non-affected cells in between tumor cells that would have been labeled positive. That gives a more detailed and concise scan, which can facilitate and enhance the tumor's treatment. 
 
  \begin{figure}[H]
  \centering \includegraphics[scale=0.7]{BDT19.png}\label{fig:fig19}
- \caption{MRI scan without Post-Processing (left), MRI scan with Post-Processing (right)}
+ \caption{MRI scan without Post-Processing (left), MRI scan with Post-Processing (right). Black areas show true positives and gray areas false positives.}
  \end{figure} 
 
 \section{Conclusion\label{sec:sec5}}
 
- In conclusion, the automatic detection and segmentation of Brain tumors using the Random Forest Approach yields acceptable results and can well be envisioned in future clinical applications. However the Random Forest must be applied under the right conditions like the right number of volumes used to train and test it. Also other parameters like the size of samples can affect the accuracy of the Forests decision deeply. The future development and application will probably consist of multiple clusters of trees, each trained with individually dedicated volumes. This papers experiment showed that it will be possible to apply Random Forests in the future treatment of tumors. 
+  In conclusion, the automatic detection and segmentation of brain tumors using the RDF approach yields acceptable results and can well be envisioned in future clinical applications. However the RDF must be applied under the right conditions like the right number of volumes used to train and test it. Also other parameters like the size of samples can affect the accuracy of the Forests decision deeply. The future development and application will probably consist of multiple clusters of trees, each trained with individually dedicated volumes. Methods like bagging or random node optimization must be chosen carefully befor emplyoing a BDT. This papers experiment showed that it will be possible to apply Random Forests in the future detection of tumors. 
 
 \newpage
 \section{References\label{sec.sec5}}
@@ -356,7 +405,11 @@ In this section, the essential basics regarding BDT and RDF and their implementa
  Ralf Moeller & Vorlesung Einführung in Web und Data Science & 2018 \\
  A. Criminisi & Decision Forests for Classification, Regression, Density, Esimation, Manifold, Learning and Semi-Supervised Learning & 2011 \\
  Kahild Usman & Brain tumor classification from multi-modality MRI using wavelets and machine learning & 2017 \\
- Wikipedia & Random Forest & 2020
+ Bjoern Menze&Multimodal Brain Tumor Segmentation Challenge&2012\\
+ D. Zikic&Context-sensitive Classification Forests for Segmentation of Brain Tumor Tissues&2012\\
+ S.Bauer&Segmentation of Brain Tumor Images Based on Integrated Hierarchical Classification and Regularization&2012\\
+ T.Riklin Raviv&Multi-modal Brain Tumor Segmentation via Latent Atlases&2012
+
 
  %\bottomrule
  \end{tabular}

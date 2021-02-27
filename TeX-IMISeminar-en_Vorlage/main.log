@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  27 FEB 2021 09:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.16)  27 FEB 2021 10:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,132 +543,92 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 174.
 
 [4 <./images/BDT2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-<./images/BDT7.png, id=42, 477.4638pt x 183.5658pt>
-File: ./images/BDT7.png Graphic file (type png)
-<use ./images/BDT7.png>
-Package pdftex.def Info: ./images/BDT7.png  used on input line 221.
-(pdftex.def)             Requested size: 334.22238pt x 128.49516pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-<./images/BDT9.png, id=46, 631.158pt x 259.6902pt>
-File: ./images/BDT9.png Graphic file (type png)
-<use ./images/BDT9.png>
-Package pdftex.def Info: ./images/BDT9.png  used on input line 225.
-(pdftex.def)             Requested size: 441.80759pt x 181.78188pt.
-
-Overfull \hbox (5.42651pt too wide) in paragraph at lines 225--226
-[][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
-
- []
-
-<./images/BDT10.png, id=47, 371.9496pt x 325.215pt>
-File: ./images/BDT10.png Graphic file (type png)
-<use ./images/BDT10.png>
-Package pdftex.def Info: ./images/BDT10.png  used on input line 232.
-(pdftex.def)             Requested size: 260.36293pt x 227.64894pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./images/BDT7.png> <./images/BDT9.png>] [7 <./images/BDT10.png>]
-<./images/BDT11.png, id=58, 272.6988pt x 242.8272pt>
+[5] [6]
+<./images/BDT11.png, id=49, 272.6988pt x 242.8272pt>
 File: ./images/BDT11.png Graphic file (type png)
 <use ./images/BDT11.png>
-Package pdftex.def Info: ./images/BDT11.png  used on input line 239.
+Package pdftex.def Info: ./images/BDT11.png  used on input line 290.
 (pdftex.def)             Requested size: 190.88785pt x 169.97787pt.
- [8 <./images/BDT11.png>]
-<./images/BDT12.png, id=63, 576.7146pt x 326.1786pt>
+ [7 <./images/BDT11.png>]
+<./images/BDT12.png, id=54, 576.7146pt x 326.1786pt>
 File: ./images/BDT12.png Graphic file (type png)
 <use ./images/BDT12.png>
-Package pdftex.def Info: ./images/BDT12.png  used on input line 260.
+Package pdftex.def Info: ./images/BDT12.png  used on input line 311.
 (pdftex.def)             Requested size: 230.68175pt x 130.46912pt.
-<./images/BDT13.png, id=64, 576.7146pt x 326.1786pt>
+<./images/BDT13.png, id=55, 576.7146pt x 326.1786pt>
 File: ./images/BDT13.png Graphic file (type png)
 <use ./images/BDT13.png>
-Package pdftex.def Info: ./images/BDT13.png  used on input line 261.
+Package pdftex.def Info: ./images/BDT13.png  used on input line 312.
 (pdftex.def)             Requested size: 230.68175pt x 130.46912pt.
 
-Overfull \hbox (15.84363pt too wide) in paragraph at lines 260--262
+Overfull \hbox (15.84363pt too wide) in paragraph at lines 311--313
 [][][] [][] 
  []
 
-[9 <./images/BDT12.png> <./images/BDT13.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+[8 <./images/BDT12.png> <./images/BDT13.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-<./images/BDT14.png, id=70, 483.7272pt x 306.9066pt>
+<./images/BDT14.png, id=61, 483.7272pt x 306.9066pt>
 File: ./images/BDT14.png Graphic file (type png)
 <use ./images/BDT14.png>
-Package pdftex.def Info: ./images/BDT14.png  used on input line 279.
+Package pdftex.def Info: ./images/BDT14.png  used on input line 331.
 (pdftex.def)             Requested size: 290.23856pt x 184.14537pt.
-[10 <./images/BDT14.png>]
-<./images/BDT15.png, id=75, 483.7272pt x 297.7524pt>
+[9 <./images/BDT14.png>]
+<./images/BDT15.png, id=66, 483.7272pt x 297.7524pt>
 File: ./images/BDT15.png Graphic file (type png)
 <use ./images/BDT15.png>
-Package pdftex.def Info: ./images/BDT15.png  used on input line 286.
+Package pdftex.def Info: ./images/BDT15.png  used on input line 338.
 (pdftex.def)             Requested size: 290.23856pt x 178.6528pt.
- [11 <./images/BDT15.png>]
-<./images/BDT16.png, id=80, 656.2116pt x 298.716pt>
+ [10 <./images/BDT15.png>]
+<./images/BDT16.png, id=71, 656.2116pt x 298.716pt>
 File: ./images/BDT16.png Graphic file (type png)
 <use ./images/BDT16.png>
-Package pdftex.def Info: ./images/BDT16.png  used on input line 306.
+Package pdftex.def Info: ./images/BDT16.png  used on input line 359.
 (pdftex.def)             Requested size: 459.34499pt x 209.09976pt.
 
-Overfull \hbox (11.21404pt too wide) in paragraph at lines 306--307
+Overfull \hbox (11.21404pt too wide) in paragraph at lines 359--360
  [][][] 
  []
 
-[12 <./images/BDT16.png>]
-<./images/BDT17.png, id=86, 501.5538pt x 245.718pt>
+[11 <./images/BDT16.png>]
+<./images/BDT17.png, id=76, 501.5538pt x 245.718pt>
 File: ./images/BDT17.png Graphic file (type png)
 <use ./images/BDT17.png>
-Package pdftex.def Info: ./images/BDT17.png  used on input line 315.
+Package pdftex.def Info: ./images/BDT17.png  used on input line 368.
 (pdftex.def)             Requested size: 351.08527pt x 172.00142pt.
-<./images/BDT18.png, id=87, 820.06375pt x 813.0375pt>
-File: ./images/BDT18.png Graphic file (type png)
-<use ./images/BDT18.png>
-Package pdftex.def Info: ./images/BDT18.png  used on input line 322.
-(pdftex.def)             Requested size: 328.01968pt x 325.20924pt.
- [13 <./images/BDT17.png> <./images/BDT18.png>]
-<./images/BDT19.png, id=93, 632.1216pt x 307.8702pt>
+<./images/BDT19.png, id=77, 632.1216pt x 307.8702pt>
 File: ./images/BDT19.png Graphic file (type png)
 <use ./images/BDT19.png>
-Package pdftex.def Info: ./images/BDT19.png  used on input line 329.
+Package pdftex.def Info: ./images/BDT19.png  used on input line 378.
 (pdftex.def)             Requested size: 442.4821pt x 215.50766pt.
- [14 <./images/BDT19.png>]
-Underfull \hbox (badness 1142) in paragraph at lines 357--357
+
+Underfull \vbox (badness 6741) has occurred while \output is active []
+
+ [12 <./images/BDT17.png> <./images/BDT19.png>] [13]
+Underfull \hbox (badness 1142) in paragraph at lines 406--406
 []\OT1/cmr/m/n/10 Decision Forests for Clas-si-fi-ca-tion, Re-gres-sion, Den-
  []
 
-[15] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux) ) 
+[14] (/Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.aux) ) 
 Here is how much of TeX's memory you used:
- 14416 strings out of 492616
- 301655 string characters out of 6129481
- 476740 words of memory out of 5000000
- 18067 multiletter control sequences out of 15000+600000
+ 14395 strings out of 492616
+ 301257 string characters out of 6129481
+ 479723 words of memory out of 5000000
+ 18050 multiletter control sequences out of 15000+600000
  10476 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,20n,70p,9161b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,20n,69p,9161b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (16 pages, 2029889 bytes).
+Output written on /Users/leonardbrenk/Documents/Uni/Semester5/seminar/TeX-IMISeminar-en_Vorlage/main.pdf (15 pages, 1435516 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
