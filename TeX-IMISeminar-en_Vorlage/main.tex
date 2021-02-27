@@ -17,16 +17,18 @@ fleqn
 
 \usepackage{pgf}
 \usepackage{ucs}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 %\usepackage[pdftex]{graphicx}
-\graphicspath{{./images/}}
-\usepackage{color}
+%\usepackage{color}
 %\usepackage{german}
 \usepackage{subfigure}
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{wrapfig}
+\usepackage{amsmath}
 
+\graphicspath{{./images/}}
 %% LAYOUT:
 
 \renewcommand{\descfont}{\bfseries}
@@ -117,32 +119,32 @@ fleqn
 % -------------------------------------------------
 
 \section{Motivation\label{sec:sec1}}
-The detection and treatment of tumors are one of today's greatest challenges for humankind. Finding mutating cells and preventing them from spreading is a complicated task. Usually, tumors occur nested in non-affected tissues, which makes their discovery and treatment heavily challenging. The current state of technology operating in that field has complications filtering the negative cells out and segmenting the pure tumor completely. Due to the variety of anatomical structures and how they can differ from person to person, even for a trained professional, it takes a lot of time to detect and fully segment a tumor in MRI scans - even more, if three-dimensional scans are used. Therefore not only are the needed financial and personal requirements greatly inefficient, but also the outcome can be flawed and incomplete based on the know-how of the experts. Machine Learning ensembles provide a promising approach to face that issue on a global, revolutionary scale.\\
+The detection and treatment of tumors is a very complex and challenging task. Finding mutating cells and preventing them from spreading is a complicated task. Usually, tumors occur nested in non-affected tissues, which makes their discovery and treatment heavily challenging. The current state of technology operating in that field has complications filtering the negative cells out and segmenting the pure tumor completely. Due to the variety of anatomical structures and how they can differ from person to person, even for a trained professional, it takes a lot of time to detect and fully segment a tumor in MRI scans. Therefore not only are the needed financial and personal requirements greatly inefficient, but also the outcome might be flawed and incomplete based on the individual know-how of the experts.\\
 
-Seeing that finding the tumor in an early stage has the highest impact and can facilitate and enhance the treatment, the detection is the key to success. The paper written by \textcolor{red}{TODO AUTHOR} in 2016 captures an experiment regarding this topic. It carries out a Random Forest based machine learning technique using multispectral volumetric MRI volumes. Training an algorithm to find and segment tumor cells on MRI scans reliably can, due to its practically limitless resources in time and memory, possibly perform on a higher level than multiple experts. Therefore, the data undergoes several pre-processing steps to be suitable for the application in Binary Decision Trees. Furthermore, after the employment of Random Forests, the data is post-processed and then analyzed. In order to illustrate the accuracy of a decision, the authors introduced a Dice Score. Thereby Binary Decision Trees can be compared and graded. The machine learning method used in this paper belongs to the supervised learning techniques, which means that the outcome of data the machine is trained with is already known and can be used to adjust and optimize the inner parameters.\\
+Seeing that finding the tumor in an early stage has the highest impact and can facilitate and enhance the treatment, the detection is the key to success. The paper written by Zoltán Kapás in 2016 captures an experiment regarding this topic. It carries out a Random Forest(RDF) based Machine Learning(ML) technique using multispectral MRI volumes. Training an algorithm to find and segment tumor cells on MRI scans reliably can, due to its large resources in time and memory, possibly perform on a higher level than multiple experts, as Kapás states. Before analyzing the data, it must undergo several pre-processing steps to be suitable for the application in Binary Decision Trees(BDT). Furthermore, after the employment of RDF, the data is post-processed and then analyzed. In order to illustrate the accuracy of a decision, the authors applied a Dice Score. Thereby RDF can be compared and graded. The ML method used in this paper belongs to the supervised learning techniques, which means that the outcome of data the machine is trained with is already known and can be used to adjust and optimize the parameters.\\
 
 The paper presents initial outcomes and recommendations regarding a complex brain tumor detection and segmentation system and its future implementation in a clinical context.
 
 \newpage
 %--------------------------------------------------
 
-\section{Introduction BDT \& RDF\label{sec:sec2}}
-In this section, the essential basics regarding Binary Decision Trees and Random Forest and their implementation are being explained and discussed.
+\section{Introduction BDT and RDF\label{sec:sec2}}
+In this section, the essential basics regarding BDT and RDF and their implementation are being explained and discussed.
 
- \subsection{Binary Decision Trees(BDT)\label{sec:sec2-1}}
+ \subsection{Binary Decision Trees\label{sec:sec2-1}}
 
  \subsubsection{General\label{sec:sec2-1-1}}
- A Binary Decision Tree (BDT) is trained and employed in order to make a decision based on a data vector. It consists of multiple levels of two-way decisions until it reaches a leaf node at the end, classifying the vector into a certain class. A BDT can be used to either deploy data into classes or predict values in the future using regression. However, this paper will concentrate on the ability to assign a label to a vector. 
+ A Binary Decision Tree (BDT) is trained and employed in order to make a decision based on an input vector. It consists of multiple levels of two-way decisions until it reaches a leaf node at the end, classifying the vector into a certain class. A BDT can be used to either deploy data into classes or predict values in the future using regression. However, this paper will concentrate on the ability to assign a label to a vector. 
 
  \begin{figure}[H]
  \centering \includegraphics[scale=0.55]{BDT1.png}\label{fig:fig1}
- \caption{The Structure of a BDT. Usually there are multiple levels of split nodes.}
+ \caption{The structure of a BDT. Usually there are multiple levels of split nodes.}
  \end{figure}
 
  The root node is the starting point of a BDT. In order for a BDT to reach a decision, it goes through several inner decision nodes, which divide the data into two subgroups and forwards them to the next node. At each split node, the data is divided again as long as the data subset decisions are distinguishable. If the decisions are unilateral, a leaf node is created. Such leaf nodes are then attributed to a class, also called a label. Thereby an inserted data vector can be classified. 
 
  \subsubsection{Building a BDT\label{sec:sec2-1-2}}
- A BDT can, amongst other options, be built from a table that contains multiple attributes and a column for the individual decision of that data row. When building a BDT, a cycle is implemented recursively. The data shall be divided into two subgroups at a time. Then each subgroup is again divided into two subgroups. In the end, there are as many subgroups as it takes to classify every single data vector correctly. The cycle starts with a given data set. For the first split, an attribute needs to be picked, which the data shall be split with. Having decided upon that attribute, a threshold is set to decide whether a vector is forwarded to the left or right child node - depending on whether its value is higher or smaller than the threshold. Using the threshold, the complete data set can then be divided into two subgroups. Now each subgroup is considered individually, and the cycle begins again. The process ends when the decisions of a subgroup are all identical. Then the leaf node is created labeled with that decision. 
+ A BDT can, amongst other options, be built from a table that contains multiple attributes and a column for the individual decision of that data row. When building a BDT, a cycle is implemented recursively. The data shall be divided into two subgroups at a time. Then each subgroup is again divided into two subgroups. In the end, there are as many subgroups as it takes to classify every single data vector correctly. The cycle starts with a given data set. For any first split, an attribute needs to be picked, which the data is split with. Having decided upon that attribute, a threshold is set to decide whether a vector is forwarded to the left or right child node - depending on whether its value is higher or smaller than the threshold. Using the threshold, the complete data set can then be divided into two subgroups. Now each subgroup is considered individually, and the cycle begins again. The process ends when the decisions of a subgroup are all identical. Then the leaf node is created labeled with that decision. 
 
  \begin{figure}[H]
  \centering \includegraphics[scale=0.55]{BDT2.png}\label{fig:fig2}
@@ -152,23 +154,69 @@ In this section, the essential basics regarding Binary Decision Trees and Random
 
  The decision for a specific feature while building a BDT can greatly influence the outcome since the generated subgroups will be completely different. That is why there is a need for a way to assess the most efficient way of splitting the data. For that, the information entropy and information gain are used. The entropy describes the level of information of a variable (\ref{fig:fig3}). The information gain compares two entropies and calculates the difference(\ref{fig:fig4}). The idea is to test every attribute as a possible option for a split node and calculate which attribute would yield the highest gain in information after the split. 
 
- \begin{figure}[h]
- \center\includegraphics[scale=0.55]{BDT3.png}\label{fig:fig3}\caption{Entropy}
- \center\includegraphics[scale=0.55]{BDT4.png}\label{fig:fig4}\caption{Information Gain}
- \end{figure}
+\begin{centering}
+   \begin{equation}\label{fig:fig3}
+      H(X)= - \sum_{i=1}^{n}P(x_i)\log_2{P(x_i)}
+   \end{equation}  
+\end{centering}
+ 
+\begin{centering}
+   \begin{equation}\label{fig:fig4}
+      Information Gain = Entropy(Parent) - Average Entropy(Children)
+   \end{equation}  
+\end{centering}
+
 
  \subsubsection{Example BDT\label{sec:sec2-1-3}}
  Given a table of sample data: \\
  
- \begin{center}\includegraphics[scale=0.7]{BDT5.png}\label{fig:fig5}\end{center}
  
- In order to decide which attribute to pick for the root node, the information gain must be calculated for all of them (Temperature, Rain, Windy, and Humidity). For example, Splitting with Temperature would look like this: \\
+ \begin{table}[]
+   \begin{tabular}{l|l|l|l||l}
+    Temperature & Rain & Windy & Humidity & Go outside? \\
+    \hline
+    \hline
+    High & Yes & True & High & No \\
+    \hline
+    Low& No & False & Low & Yes \\
+    \hline
+    Low& No & True & Low & No \\
+    \hline
+    High& No & False &  High& Yes \\
+    \hline
+    High&  Yes& False & Low & No \\
+    \hline
+    Low& Yes & True & Low & No \\
+    \hline
+    High& No &  False&  Low& Yes \\
+    \hline
+    Low&  Yes& True & High & No \\
+    \hline
+    Low&  No& True & High &  Yes\\
+    \hline
+    Low&  No&  False& Low & Yes \\
+    \hline
+    High&  Yes& True & High &  No\\
+    \hline
+    High&  Yes&  False& Low & No \\
+    Low&  No& True& High & Yes\\
+    \hline
+    High& Yes & False & High & No
+   \end{tabular}
+   \label{fig:fig5}
+   \caption{A BDT can be built from a table like such.}
+   \end{table}
+
+ 
+ In order to decide which attribute to pick for the root node the information gain must be calculated for all of them (Temperature, Rain, Windy, and Humidity). For example splitting with Temperature would look like this: \\
 
  First, we need to calculate the entropy of the complete table. 
 
- \begin{center}\includegraphics[scale=0.7]{BDT8.png}\label{fig:fig8}\end{center}
+\begin{equation}\label{fig:fig8}
+   H(X)= - \biggl[\frac{6}{14}\log_2(\frac{6}{14}+\frac{8}{14}\log_2(\frac{8}{14})\biggr]=0,9852
+\end{equation}  
 
- If we were to split at Temperature, the table would be divided into two groups, one with high temperature and one with low temperature. Now the entropy for both of these subgroups needs to be calculated individually. The information gain for Temperature is the difference resulting from the complete entropy minus the average entropy of the newly generated subgroups. In this case, the information gain is $0,01615$. 
+ If we were to split at Temperature, the table would be divided into two groups, one with high temperature and one with low temperature. As it has a binary result there is no need to calculate a threshold. Now the entropy for both of these subgroups needs to be calculated individually. The information gain for Temperature is the difference resulting from the complete entropy minus the average entropy of the newly generated subgroups. In this case, the information gain is $0,01615$. 
 
  \begin{center}\includegraphics[scale=0.7]{BDT7.png}\label{fig:fig7}\end{center}
 
@@ -246,7 +294,7 @@ In this section, the essential basics regarding Binary Decision Trees and Random
  \subsection{Training and Testing\label{sec:sec3-3}}
  The data is now ready to be used for training BDTs. As explained in section \ref{sec:sec2-1} the tree is built, while the attributes like Rain or Temperature are now T1, T2, etc. As 1.5 Mio vectors are too many to use on training, the tree samples have to be selected. When selecting, e.g., 300 samples, then it means that 300 feature vectors representing tumor cells, 300 feature vectors representing edema, and 300 feature vectors representing negative cells are used. 
  
- \subsection{Post-Processing\label{sec:sec3-4}}
+ \subsection{post-Processing\label{sec:sec3-4}}
  Even though the BDT and RDF classify most of the voxels reliably, there are usually some negative cells labeled as tumor or edema due to the great variety of normal tissues they can belong to. In order to correct falsely labeled positives for each tumor and edema voxel, a 250-voxel neighborhood is defined. The average of these is then compared with a pre-defined threshold, which value is debatable. If the voxel intensity in question is less than the average intensities, it is relabeled into a negative voxel; it remains the same if it is higher.
 
  \newpage
