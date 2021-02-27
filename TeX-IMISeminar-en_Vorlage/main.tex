@@ -136,7 +136,7 @@ In this section, the essential basics regarding BDT and RDF and their implementa
  A BDT is trained and employed in order to make a decision based on an input vector. It consists of multiple levels of two-way decisions until it reaches a leaf node at the end, classifying the vector into a certain class. A BDT can be used to either deploy data into classes or predict values in the future using regression. However, this paper will concentrate on the ability to assign a label to a vector. 
 
  \begin{figure}[H]
- \centering \includegraphics[scale=0.55]{BDT1.png}\label{fig:fig1}
+ \centering \includegraphics[scale=0.4]{BDT1.png}\label{fig:fig1}
  \caption{The structure of a BDT. Usually there are multiple levels of split nodes.}
  \end{figure}
 
@@ -146,31 +146,24 @@ In this section, the essential basics regarding BDT and RDF and their implementa
  A BDT can, amongst other options, be built from a table that contains multiple attributes and a column for the individual decision of that data row. When building a BDT, a cycle is implemented recursively. The data is be divided into two subgroups at a time. Then each subgroup is again divided into two subgroups. In the end, there are as many subgroups as it takes to classify every single data vector correctly. The cycle starts with a given data set. For any first split, an attribute needs to be picked, which the data is split with. Having decided upon that attribute, a threshold is set to decide whether a vector is forwarded to the left or right child node - depending on whether its value is higher or smaller than the threshold. Using the threshold, the complete data set can then be divided into two subgroups. Now each subgroup is considered individually, and the cycle begins again. The process ends when the decisions of a subgroup are all identical. Then the leaf node is created labeled with that decision. 
 
  \begin{figure}[H]
- \centering \includegraphics[scale=0.55]{BDT2.png}\label{fig:fig2}
+ \centering \includegraphics[scale=0.3]{BDT2.png}\label{fig:fig2}
  \caption{The process of buidling a BDT.}
  \end{figure}
 
 
- The decision for a specific feature while building a BDT can greatly influence the outcome since the generated subgroups will be completely different. That is why there is a need for a way to assess the most efficient way of splitting the data. For that, the information entropy and information gain are used. The entropy describes the level of information of a variable (\ref{fig:fig3}). The information gain compares two entropies and calculates the difference(\ref{fig:fig4}). The idea is to test every attribute as a possible option for a split node and calculate which attribute would yield the highest gain in information after the split. 
+ The decision for a specific feature while building a BDT can greatly influence the outcome since the generated subgroups will be completely different. That is why there is a need for a way to assess the most efficient way of splitting the data. For that, the information entropy and information gain are used. The entropy describes the level of information of a variable (\ref{fig:fig3}). The information gain compares two entropies and calculates the difference. The idea is to test every attribute as a possible option for a split node and calculate which attribute would yield the highest gain in information after the split. 
 
 \begin{centering}
    \begin{equation}\label{fig:fig3}
       H(X)= - \sum_{i=1}^{n}P(x_i)\log_2{P(x_i)}
    \end{equation}  
 \end{centering}
- 
-\begin{centering}
-   \begin{equation}\label{fig:fig4}
-      Information Gain = Entropy(Parent) - Average Entropy(Children)
-   \end{equation}  
-\end{centering}
-
 
  \subsubsection{Example BDT\label{sec:sec2-1-3}}
  Given a table of sample data: \\
  
  
- \begin{table}[]
+ \small\begin{table}[]
    \begin{tabular}{|l|l|l|l||l|}
       \hline
       Temperature & Rain & Windy & Humidity & Go outside? \\
@@ -233,7 +226,7 @@ Since the information gain is the value that needs to be maximized the informati
 Having split the data with rain, two subgroups are created (Table 2). One with all Rain values 'Yes' and one with 'No' Rain. Selecting the attribute for the next split node for a subgroup proceeds exactly like with the root node only with a smaller set of data.
 
 
-\begin{table}[h!]
+\small\begin{table}[H]
    \begin{tabular}{|l|l|l|l||l|}
       \hline
       Temperature & Rain & Windy & Humidity & Go outside? \\
@@ -257,7 +250,7 @@ Having split the data with rain, two subgroups are created (Table 2). One with a
    \label{fig:fig101}
    \end{table}
 
-   \begin{table}[h]
+   \begin{table}[H]
       \begin{tabular}{|l|l|l|l||l|}
       \hline
          Temperature & Rain & Windy & Humidity & Go outside? \\
@@ -325,16 +318,16 @@ RDF can be described and influenced by many parameters like the size of the fore
  \begin{center} $T[x,y,z] = \biggl[T1[x,y,z], T2[x,y,z], T1C[x,y,z], FLAIR[x,y,z]\biggr]$\end{center}
 
  \begin{figure}[H]
- \centering \includegraphics[scale=0.6]{BDT14.png}\label{fig:fig14}
+ \centering \includegraphics[scale=0.5]{BDT14.png}\label{fig:fig14}
  \caption{The Feature vector is generated to address a specific cell in all four cells.}
  \end{figure}
 
  Before the data is used in training and testing BDTs and RDFs, it needs to be pre-processed and translated into a shared format the BDT understands. The first step is the histogram normalization. A histogram displays the number of occurences of specific intensity values. In this case, the middle 50$\%$ of the data is supposed to be located between the intensity values of $600$ and $800$. Also, the minimum value of $200$ and the maximum value of $1200$ are set as boundaries. The second step involves the neighborhood of a considered voxel. Since the feature vector does not include any information regarding the voxel's location, two more features have to be computed for each scan. The new feature vector will thereby consist of 12 elements. For the computation of the first added feature, all direct neighbor voxels in a $3 \times 3 \times 3$-sized Cube are considered. The average intensity value of them is the first new feature value of the vector. The second feature is computed based on the average intensity value of the eight closest voxels of that slice and two closest ones from the neighboring slices. 
 
- \begin{figure}[H]
- \centering \includegraphics[scale=0.5]{BDT15.png}\label{fig:fig15}
- \caption{The updated Feature vector contains twelve elements.}
- \end{figure}
+ %\begin{figure}[H]
+ %\centering \includegraphics[scale=0.5]{BDT15.png}\label{fig:fig15}
+ %\caption{The updated Feature vector contains twelve elements.}
+ %\end{figure}
 
 
 
@@ -359,22 +352,20 @@ RDF can be described and influenced by many parameters like the size of the fore
  The second result shows the dice scores when training a RDF with volume $a$ and testing with volume $b$ and another training with volume $b$ and testing with $a$. The table does not shown symmetry regarding training and testing with volumes. It should be emphasized that the right site draws a higher overall score. 
 
  \begin{figure}[H]
- \centering \includegraphics[scale=0.7]{BDT17.png}\label{fig:fig17}
+ \centering \includegraphics[scale=0.55]{BDT17.png}\label{fig:fig17}
  \caption{Training and testing is not symmetric}
  \end{figure} 
 
  The following charts concern the effect of post-processing. Looking at the blue diagrams, it becomes clear that Post-Processing can be highly beneficial for increasing the Dice Score. In the lower graphs, the Dice Score is drawn depending on how the threshold for the 250-voxel neighborhood. A threshold around 200 yields the most promising results. 
 
-
  In Figure 9 two MRI scans are shown, one without Post-processing (left) and one with Post-Processing (right). What stands out is that Post-Processing finds non-affected cells in between tumor cells that would have been labeled positive. That gives a more detailed and concise scan, which can facilitate and enhance the tumor's treatment. 
 
- \begin{figure}[H]
+ \begin{figure}[h]
  \centering \includegraphics[scale=0.5]{BDT19.png}\label{fig:fig19}
  \caption{MRI scan without Post-Processing (left), MRI scan with Post-Processing (right). Black areas show true positives and gray areas false positives.}
  \end{figure} 
 
 \section{Conclusion\label{sec:sec5}}
-
   In conclusion, the automatic detection and segmentation of brain tumors using the RDF approach yields acceptable results and can well be envisioned in future clinical applications. However the RDF must be applied under the right conditions like the right number of volumes used to train and test it. Also other parameters like the size of samples can affect the accuracy of the Forests decision deeply. The future development and application will probably consist of multiple clusters of trees, each trained with individually dedicated volumes. Methods like bagging or random node optimization must be chosen carefully befor emplyoing a BDT. This papers experiment showed that it will be possible to apply Random Forests in the future detection of tumors. 
 
 
